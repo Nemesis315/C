@@ -4,10 +4,12 @@ int main()
 {
 	int a, b;
 	
-	printf ("Inserisci il valore numerico di a \n");
+	printf ("Inserisci il valore numerico di a: ");
 	scanf ("%d", &a);
-	printf ("Inserisci il valore numerico di b \n");
+	printf ("\nInserisci il valore numerico di b: ");
 	scanf ("%d", &b);
+	printf ("\n");
+	
 	if (a==b)
 	{
 		printf ("a e b sono uguali");
@@ -20,8 +22,9 @@ int main()
 		}
 		else
 		{
-			printf ("Il minore e a il maggiore e b");
+			printf ("Il minore e' a=%d il maggiore e' b=%d\n", a, b);
 		}
 	}
+
 	return 0;
 }
