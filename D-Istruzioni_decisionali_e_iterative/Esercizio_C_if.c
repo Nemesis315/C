@@ -20,7 +20,7 @@ int main()
     scanf ("%d", &spesa);
     printf("\n");
     
-    //
+    
     if (spesa>50)
     {
         if (spesa>100)
