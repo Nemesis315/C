@@ -28,10 +28,7 @@ int main()
     {
         if (a>c)
         {
-            if (b>c)
-            {
-                
-            }
+            
             
         }
         
