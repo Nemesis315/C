@@ -29,10 +29,12 @@ int main()
         if (l1==l3)
         {
             printf("Il triangolo e equilatero");
+            printf("\n");
         }
         else
         {
             printf("Il triangolo e isoscle");
+            printf("\n");
         }
          
     }
@@ -41,10 +43,12 @@ int main()
         if (l2==l3)
         {
             printf("Il triangolo e isoscele");
+            printf("\n");
         }
         else
         {
             printf("Il triangolo e scaleno");
+            printf("\n");
         }
         
         
