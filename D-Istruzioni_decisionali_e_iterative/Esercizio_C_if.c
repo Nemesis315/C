@@ -26,13 +26,13 @@ int main()
         if (spesa>100)
         {
             spesa= (spesa-(spesa*10/100));
-            printf ("Importo da pagare = %d", spesa);
+            printf ("Importo da pagare = %d e stato applicato uno sconto del 10%", spesa);
             printf("\n");
         }
         else
         {
            spesa= (spesa-(spesa*5/100)); 
-           printf ("Importo da pagare = %d" , spesa);
+           printf ("Importo da pagare = %d e stato applicato uno sconto del 5%" , spesa);
            printf("\n");          
         }
         
