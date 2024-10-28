@@ -13,23 +13,31 @@ Output: determinare maggiore e minore
 int main()
 {
     //dichiarazione della variabili
-    int a,b,c;
+    int num1,num2,num3;
 
     //Input e lettura delle variabili inserite da tastiera
-    printf("Inserisci il valore numerio di a: ");
-    scanf("%d", &a);
-    printf("\nInserisci il valore numerico di b: ");
-    scanf("%d", &b);
-    printf("\nInsersci il valore numerico di c: ");
-    scanf("%d", &c);
+    printf("Inserisci il valore numerio di num1: ");
+    scanf("%d", &num1);
+    printf("\nInserisci il valore numerico di num2: ");
+    scanf("%d", &num2);
+    printf("\nInsersci il valore numerico di num3: ");
+    scanf("%d", &num3);
     printf("\n");
 
-    if (a>b)
+    if (num1>num2)
     {
-        if (a>c)
+        if (num1>num3)
         {
+            if (num2>num3)
+            {
+                printf("Il maggiore e %d il minore e %d", num1,num3);
+            }
+            else
+            {
+                printf("Il maggiore e %d il minore e %d", num1,num2);
+            }
             
-            
+                  
         }
         
     }
