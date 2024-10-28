@@ -31,21 +31,63 @@ int main()
             if (num2>num3)
             {
                 printf("Il maggiore e %d il minore e %d", num1,num3);
+                printf("\n");
             }
             else
             {
                 printf("Il maggiore e %d il minore e %d", num1,num2);
-            }
-            
-                  
+                printf("\n");
+            }  
         }
+        else
+        {
+            if (num3>num2)
+            {
+                printf("Il maggiore e %d il minore e %d", num3,num2);
+                printf("\n");
+            }
+            else
+            {
+                printf("Il maggiore e %d il minore e %d", num3,num1);
+                printf("\n");
+            }
+        }
+        
         
     }
     else
     {
+        if (num2>num3)
+        {
+            if (num3>num1)
+            {
+                printf("Il maggiore e %d il minore e %d", num2,num1);
+                printf("\n");
+            }
+            else
+            {
+                printf("Il maggiore e %d il minore e %d", num2,num3);
+                printf("\n");
+            }
+            
+            
+        }
+        else
+        {
+            if (num3>num1)
+            {
+                printf("Il maggiore e %d il minore e %d", num3,num1);
+                printf("\n");
+            }
+            else
+            {
+                printf("Il maggiore e %d il minore e %d", num2,num3);
+                printf("\n");
+            }
+            
+        }
+        
         
     }
-
-
     return 0;
 }
