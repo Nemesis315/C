@@ -33,7 +33,7 @@ int main()
         }
         else
         {
-            printf("Il triangolo e isoscle");
+            printf("Il triangolo e isoscele");
             printf("\n");
         }
          
