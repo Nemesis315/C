@@ -22,7 +22,7 @@ int main()
 		}
 		else
 		{
-			printf ("Il minore e' a=%d il maggiore e' b=%d\n", a, b);
+			printf ("Il minore e' a= %d il maggiore e' b= %d\n", a, b);
 		}
 	}
 
