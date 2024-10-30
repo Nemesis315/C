@@ -18,7 +18,7 @@ int main()
 	{
 		if (a>b)
 		{
-			printf ("Il minore e b il maggiore e a");
+			printf ("Il minore e' %d il maggiore e' %d\n", b,a);
 		}
 		else
 		{
