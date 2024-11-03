@@ -13,48 +13,49 @@ Output: voto finale con bonus
 int main()
 {
     //dichiarazione delle variabili
-    int media, crediti, voto_finale;
+    int md, cr, voto_finale;
 
     //Acquisizione della media e dei crediti da tastiera
     printf("Inserisci la media dello studente: ");
-    scanf("%d", &media);
+    scanf("%d", &md);
     printf("\n");
     printf("Inserisci i crediti ottenuti durante il semestre dello studente: ");
-    scanf("%d", &crediti);
+    scanf("%d", &cr);
     printf("\n");
 
-    voto_finale = media;
+    voto_finale = md;
 
     //Applicazione del bonus in base alle condizioni specificate
-    if (media >= 28 && crediti > 24)
+    if (md >= 28 && cr > 24)
     {
-        voto_finale +2;
-        printf("Media iniziale: %d", &media);
+        voto_finale = md+2;
+        printf("Media iniziale: %d",md);
         printf("\n");
-        printf("Numero di crediti: %d", &crediti);
+        printf("Numero di crediti: %d",cr);
         printf("\n");
-        printf("Voto finale: %d", &voto_finale);
+        printf("Voto finale: %d", voto_finale);
         printf("\n");
+        
     }
     else
     {
-        if (media >= 25 && media <=27 && crediti >= 18 && crediti <=24)
+        if (md >= 25 && md <=27 && cr >= 18 && cr <=24)
         {
-            voto_finale +1;
-            printf("Media iniziale: %d", &media);
+            voto_finale = md+1;
+            printf("Media iniziale: %d", md);
             printf("\n");
-            printf("Numero di crediti: %d", &crediti);
+            printf("Numero di crediti: %d", cr);
             printf("\n");
-            printf("Voto finale: %d", &voto_finale);
+            printf("Voto finale: %d", voto_finale);
             printf("\n");
         }
         else
         {
-            printf("Media iniziale: %d", &media);
+            printf("Media iniziale: %d", md);
             printf("\n");
-            printf("Numero di crediti: %d", &crediti);
+            printf("Numero di crediti: %d", cr);
             printf("\n");
-            printf("Voto finale: %d", &voto_finale);
+            printf("Voto finale: %d", voto_finale);
             printf("\n");
         }
     }
