@@ -18,8 +18,8 @@ int main()
     int carattere;
 
     printf("Inserire il carattere: ");
-    sscanf("%d", &carattere);
+    scanf("%d", &carattere);
     printf("\n");
-
+    
     
 }
