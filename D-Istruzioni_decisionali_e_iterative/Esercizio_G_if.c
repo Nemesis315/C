@@ -21,5 +21,6 @@ int main()
     scanf("%d", &carattere);
     printf("\n");
     
+    printf("Il carattere inserito e' : %d", carattere);
     
 }
