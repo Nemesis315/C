@@ -15,12 +15,18 @@ Output: stampare a schermo il valore corrispondente in codice ascii in decimale 
 int main()
 {
     // dichiarazione delle variabile
-    int carattere;
+    char carattere;
 
     printf("Inserire il carattere: ");
-    scanf("%d", &carattere);
+    scanf("%c", &carattere);
     printf("\n");
     
-    printf("Il carattere inserito e' : %d", carattere);
-    
+    printf("Il carattere inserito e' : %c", carattere);
+    printf("\n");
+    printf("Codice ASCII (decimale): %d", carattere);
+    printf("\n");
+    printf("Codice ASCII (esadecimale): %x ", carattere);
+    printf("\n");
+
+    return 0;
 }
