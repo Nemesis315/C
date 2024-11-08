@@ -21,7 +21,7 @@ int main()
     scanf("%c", &carattere);
     printf("\n");
     
-    printf("Il carattere inserito e' : %c", carattere);
+    printf("Il carattere inserito e' :%c", carattere);
     printf("\n");
     printf("Codice ASCII (decimale): %d", carattere);
     printf("\n");
