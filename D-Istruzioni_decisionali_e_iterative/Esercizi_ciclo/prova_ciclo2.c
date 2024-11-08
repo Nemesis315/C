@@ -3,9 +3,10 @@
 int main()
 {
     int max,min,num;
-    printf("Inserire il numero \n");
+    
     do
     {
+        printf("Inserire il numero \n");
         scanf("%d", &num);
         if (num>max)
         {
@@ -13,10 +14,11 @@ int main()
         }
         if (num<min)
         {
-            num=min;
+            min=num;
         }
         
-    } while (num!=0);
+    } while (num != 0);
+    
     printf("Il maggiore e' :%d", max);
     printf("\n");
     printf("Il minore e' :%d ", min);
