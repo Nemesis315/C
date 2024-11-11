@@ -17,7 +17,6 @@ int main()
     contatore=0;
     somma=0;
 
-    //
     do
     {
         printf("Inserire il numero \n ");
@@ -26,7 +25,6 @@ int main()
         contatore= contatore+1;
     } while (num != 0);
 
-    //
     media= somma/contatore;
     printf("Media =%d", media);
     printf("\n");
@@ -34,5 +32,4 @@ int main()
     printf("\n");
     
     return 0; 
-
 }
