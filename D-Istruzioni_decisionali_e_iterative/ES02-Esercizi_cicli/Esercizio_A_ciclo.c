@@ -14,9 +14,8 @@ int main()
 {
     //dichiarazione delle variabili
     int num,media,contatore,somma;
-    contatore=0;
-    somma=0;
-
+    contatore=0,somma=0;
+    
     do
     {
         printf("Inserire il numero \n ");
