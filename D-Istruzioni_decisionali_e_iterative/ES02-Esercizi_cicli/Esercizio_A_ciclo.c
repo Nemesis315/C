@@ -13,21 +13,22 @@ Output: valore della media
 int main()
 {
     //dichiarazione delle variabili
-    int num,media,contatore,somma;
+    int num,contatore,somma;
+    float media;
     contatore=0,somma=0;
     
     do
     {
-        printf("Inserire il numero \n ");
+        printf("Inserire il numero: \n ");
         scanf("%d", &num);
         somma=somma+num;
         contatore= contatore+1;
     } while (num != 0);
 
     media= somma/contatore;
-    printf("Media =%d", media);
-    printf("\n");
     printf("Somma =%d", somma);
+    printf("\n");
+    printf("Media =%.1f", media);
     printf("\n");
     
     return 0; 
