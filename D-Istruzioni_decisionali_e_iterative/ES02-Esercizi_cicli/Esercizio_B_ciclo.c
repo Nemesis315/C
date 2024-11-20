@@ -18,32 +18,33 @@ int main()
     //dichiarazione delle variabili
     int num1,num2;
 
-    printf("Inserire un numero intero");
+    printf("Inserire un numero intero:");
     scanf("%d", &num1);
     printf("\n");
-    printf("Inserire un secondo numero intero");
+    printf("Inserire un secondo numero intero:");
     scanf("%d", &num2);
     printf("\n");
 
     //controllo se num1>num2
+    printf("Numeri compresi sono:\n");
     if (num1>num2)
     {
-        printf("%d", num1);
+        printf("%d\n", num1);
         do
         {
-            num1=num1--;
-            printf("%d", num1);
-        } while (num1!=num2);
+            num1--;
+            printf("%d\n", num1);
+        } while (num1 != num2);
         
     }
     else
     {
-        printf("%d", num2);
+        printf("%d\n", num2);
         do
         {
-            num2=num2--;
-            printf("%d", num2);
-        } while (num2!=num1);
+            num2--;
+            printf("%d\n", num2);
+        } while (num2 != num1);
         
     }
     return 0;
