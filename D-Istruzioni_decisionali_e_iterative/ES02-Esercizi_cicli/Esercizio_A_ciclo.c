@@ -15,6 +15,8 @@ int main()
     //dichiarazione delle variabili
     int num,contatore,somma;
     float media;
+    contatore=0;
+    somma=0;
     
     do
     {
