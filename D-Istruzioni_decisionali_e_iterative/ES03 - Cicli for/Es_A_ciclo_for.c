@@ -20,7 +20,7 @@ int main()
     scanf("%d", &num);
     printf("\n");
 
-    for ( contatore = 1; num <= contatore; contatore++)
+    for ( contatore = 1; num >= contatore; contatore++)
     {
         if (num % contatore == 0)
         {
@@ -28,7 +28,7 @@ int main()
         }
         else
         {
-            
+
         }
         
     }
