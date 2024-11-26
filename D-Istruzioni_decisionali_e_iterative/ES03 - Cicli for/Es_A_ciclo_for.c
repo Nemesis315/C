@@ -12,29 +12,22 @@ Output: stampo a schermo tutti i divisori
 
 #include<stdio.h>
 
-int main()
+int main() 
 {
-    //inizializzazione delle variabili
-    int num,contatore;
+    int num, contatore;
 
-    printf("Inserire un numero intero: ");
+    // Richiesta dell'input
+    printf("Inserisci un numero intero: ");
     scanf("%d", &num);
-    printf("\n");
 
-    //ciclo for
-    for ( contatore = 1; num >= contatore; contatore++)
-    {
-        //controllo della condizione
-        if (num % contatore == 0)
-        {
-            printf("I divisori sono: %d ", contatore);
-            printf("\n");
-        }
-        else
-        {
+    // Stampa i divisori del numero
+    printf("I divisori di %d sono:\n", num);
 
+    for (contatore = 1; contatore <= num; contatore++) {
+        if (num % contatore == 0) {
+            printf("%d\n", contatore);
         }
-        
     }
+
     return 0;
 }
