@@ -16,7 +16,8 @@ int main()
     int Div1,Div2;
     
     // Visualizza tutte le coppie di numeri naturali la cui somma è 15
-    printf("Le coppie ordinate di numeri naturali la cui somma è 15 sono:\n");
+    printf("Le coppie ordinate di numeri naturali la cui somma è 15 sono:");
+    printf("\n");
     
     for (Div1 = 0; Div1 <= 15; Div1++) 
     {
@@ -24,7 +25,8 @@ int main()
         {
             if (Div1 + Div2 == 15) 
             {
-                printf("(%d, %d)\n", Div1, Div2);
+                printf("(%d, %d)", Div1, Div2);
+                printf("\n");
             }
         }
     }
