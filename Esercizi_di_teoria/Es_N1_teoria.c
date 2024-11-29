@@ -26,8 +26,13 @@ int main ()
     }
     else
     {
-        printf("Non ci sono numeri pari inferiori a %d", num);
-        printf("\n");
+        num=num-1;
+        do
+        {
+            printf("%d",num);
+            printf("\n");
+        } while (num != 0);
+        
     }
     return 0;
 }
