@@ -32,7 +32,6 @@ int main ()
             printf("%d",num);
             printf("\n");
         } while (num != 0);
-        
     }
     return 0;
 }
