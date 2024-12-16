@@ -36,8 +36,14 @@ Output: stampo a schermo la somma dei numeri
 #define BACK_CYAN   "\033[46m"
 #define BACK_WHITE  "\033[47m"
 
+#define CLEAR_SCREEN "\033[2J"
+
 int main()
 {
-    printf("\033[43m\033[31m *** Menu *** \033[0m \n");
-    
+    // Cancella lo schermo
+    printf(CLEAR_SCREEN);
+
+    // Test dei colori del testo
+    printf(RED "Questo è un testo rosso!\n" RESET);
+    printf(GREEN "Questo è un testo verde!\n" RESET);
 }
