@@ -10,3 +10,19 @@ Input: numeri compresi tra 1 e 100
 Elaborazione: calcolo dei numeri primi 
 Output: stampo a schermo tutti i numeri primi
 */
+
+#include<stdio.h>
+
+int main()
+{
+    int cont1,cont2,Nprimo;     //inizializziamo le variabili
+
+    printf("I numeri primi tra 1 e 100 sono:");
+    printf("\n");
+
+    for (cont1 = 1; cont1 <=100; cont1++)
+    {
+                
+    }
+    
+}
