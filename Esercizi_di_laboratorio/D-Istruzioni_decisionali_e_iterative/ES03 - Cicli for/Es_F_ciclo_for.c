@@ -22,7 +22,7 @@ int main()
 
     for (cont1 = 1; cont1 <=100; cont1++)
     {
-                
+        
     }
     
 }
