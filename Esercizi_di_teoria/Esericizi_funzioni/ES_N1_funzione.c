@@ -16,6 +16,10 @@ int main()
 
     printf("La media tra %d e %d e: %.1f", a,b,Ris);
     printf("\n");
+    Ris = Media(15,18);
+
+    printf("La media e: %.1f", Ris);
+    printf("\n");
 
     return 0;
 }
