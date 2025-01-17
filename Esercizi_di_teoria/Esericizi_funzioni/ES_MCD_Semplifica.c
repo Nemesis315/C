@@ -16,6 +16,9 @@ int main()
 
     printf("L'MCD tra %d e %d e: %d", Num1,Num2,Ris);
 
+    Semplifica(Num1,Num2,Ris);
+
+
     return 0;
 }
 
@@ -42,4 +45,5 @@ void Semplifica (int x, int y, int z)
     y = y / z;
 
     printf("La frazione semplificata e %d/%d", x,y);
+    printf("\n");
 }
