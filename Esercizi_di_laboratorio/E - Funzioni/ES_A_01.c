@@ -27,7 +27,7 @@ int main()
 
     Area = area_rettangolo(base,altezza);
 
-    printf("La media tra %d e %d e: %.1f", base,altezza,Area);
+    printf("L'area tra %d e %d e: %d", base,altezza,Area);
     printf("\n");
     
 
@@ -36,7 +36,9 @@ int main()
 
 int area_rettangolo (int base,int altezza)
 {
+    int area;
     
-   
-    
+    area = base * altezza;
+
+    return area;
 }
