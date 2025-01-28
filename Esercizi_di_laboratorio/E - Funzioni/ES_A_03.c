@@ -14,7 +14,7 @@
 
 #include<stdio.h>
 
-int Dnum(int x); //Dmun = Divisori di un numero
+void Dnum(int x); //Dmun = Divisori di un numero
 
 int main()
 {
@@ -23,17 +23,15 @@ int main()
     scanf("%d", &Num);      //Leggo il numero letto dell'utente
     printf("\n");
 
-    Ris=Dnum(Num);      //Chiamo la funzione Dnum
-
-    printf("la somma dei divisori e: ", Ris);       //Stampo a schermo la somma di tutti i divisori del numero
+    Dnum(Num);      //Chiamo la funzione Dnum
 
     return 0;       //termino il programma     
 
 }
 
-int Dnum(int x)     
+void Dnum(int x)     
 {
-    int cont,Somma,Ris;     //Dichiaro 3 parametri attuali 
+    int cont,Somma = 0,Ris;     //Dichiaro 3 parametri attuali 
 
     for (cont = 1; cont <= x; cont++) 
     {
@@ -42,5 +40,7 @@ int Dnum(int x)
             Ris=Somma+=cont;        
         }
     }
-    return Ris;     //restituisco Ris
+    
+    printf("La somma dei divisori e: %d", Ris);
+    printf("\n");
 }
