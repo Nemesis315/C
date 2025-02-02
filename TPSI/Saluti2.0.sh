@@ -10,7 +10,7 @@ clear  #Cancello tutto lo schermo prima di eseguire lo script
 echo -n "Inserire il nome: "
 read nome
 
-if [ -n "$nome" ]
+if [ -gt "$nome" ]
 then
     echo -n "Inserire l'ora corrente: "
     read ora
