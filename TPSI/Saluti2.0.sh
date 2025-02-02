@@ -10,7 +10,7 @@ clear  #Cancello tutto lo schermo prima di eseguire lo script
 echo -n "Inserire il nome: "
 read nome
 
-if [ "$nome"  ]
+if [ -n "$nome" ]
 then
     echo -n "Inserire l'ora corrente: "
     read ora
@@ -19,11 +19,18 @@ then
     echo -n "Inserire minuti correnti: "
         read minuti
 
-    if [ "$ora" -ge 1 && "$ora" -le 24 ] && [ "$minuti" -ge 1 && "$minuti" -le 60 ]
+    if [ "$ora" -ge 1 && "$ora" -le 24 ] 
     then
-        echo -n "Inserire minuti correnti: "
-        read minuti
 
+        if [ "$minuti" -ge 1 && "$minuti" -le 60 ]
+        then
+
+            echo -n "Inserire minuti correnti: "
+            read minuti
+        else
+
+            echo
+        fi
 
 
     else
