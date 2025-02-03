@@ -13,31 +13,83 @@ Aggiungere alla funzione menu le chiamate alle tre precedenti funzioni per testa
 int area_rettangolo (int base,int altezza);
 void Dnum(int x);
 int MCD (int x ,int y);
+int menu (void);
 
 int main()
 {
-    int Numero;
-    printf("\n");
-
-    switch (Numero)
+    int scelta;
+    int base,altezza,Area;
+    int num;
+    int n1,n2;
+    int RisMCD;
+    do
     {
-    case 0:
-        int Num1,Num2,Area;
+        scelta= menu();
+        switch (scelta)
+        {
+        case 0:
+            printf("Arrivederci e buona giornata");
+            printf("\n");
+            break;
 
-        printf("Inserire un numero intero come base del rettangolo: ");
-        scanf("%d", &Num1);
-        printf("Inserire un numero intero come altezza del rettangolo ");
-        scanf("%d", &Num2);
-        
-        Area= area_rettangolo(Num1,Num2);
+        case 1:
+            
+            printf("Inserire un numero intero che sara la base del rettangolo: ");
+            scanf("%d", &base);
+            printf("\n");
 
-        printf("L'area del rettangolo con base %d e altezza %d e: %d", Num1,Num2,Area);
+            printf("Inserire un numero intero che sara l'altezza del rettangolo: ");
+            scanf("%d",&altezza);
+            printf("\n");
+
+            Area=area_rettangolo(base,altezza);
+
+            printf("L'area del rettangolo con base %d e altezza %d vale: %d", base,altezza,Area);
+            printf("\n");
+            printf("\n");
+            printf("\n");
+
+            break;
+
+        case 2:
+            
+
+            printf("Inserire un numero per sapere la somma dei suoi divisori: ");
+            scanf("%d", &num);
+            printf("\n");
+
+            Dnum(num);
+
+
+            break;
+
+        case 3:
+
+            printf("Inserire 2 numeri interi per sapere il loro MCD: \n");
+            scanf("%d %d",&n1,&n2);
+            printf("\n");
+
+            RisMCD=MCD(n1,n2);
+
+            printf("L'MCD tra %d e %d vale: %d", n1,n2,RisMCD);
+            printf("\n");
+            printf("\n");
+            printf("\n");
+
+
+
         
-        break;
+        default:
+
+            printf("Hai sbagliato a inserire il numero tra quelli richiesti");
+            printf("\n");
+            printf("\n");
+            printf("\n");
+            break;
+        }
+
+    } while (scelta != 0);
     
-    default:
-        break;
-    }
 }
 void Dnum(int x)     
 {
@@ -53,6 +105,9 @@ void Dnum(int x)
     
     printf("La somma dei divisori e: %d", Ris);
     printf("\n");
+    printf("\n");
+    printf("\n");
+    
 }
 int MCD (int x, int y)  
 {
@@ -77,4 +132,23 @@ int area_rettangolo (int base,int altezza)
     area = base * altezza;      //Moltiplico la base per l'altezza 
 
     return area;        //termino la funzione con il risultato dell'area
+}
+
+int menu(void)
+{
+    int scelta;
+
+    printf("Digita 0 per uscire dal menu");
+    printf("\n");
+    printf("Digita 1 per calcolare l'area del triangolo");
+    printf("\n");
+    printf("Digita 2 per calcolare la somma dei divisori di un numero");
+    printf("\n");
+    printf("Digita 3 per calcolare l'MCD di 2 numeri");
+    printf("\n");
+
+
+    scanf("%d", &scelta);
+
+    return scelta;
 }
