@@ -81,7 +81,7 @@ int main()
         
         default:
 
-            printf("Hai sbagliato a inserire il numero tra quelli richiesti");
+            printf("Hai sbagliato a inserire il numero tra quelli richiesti reinseriscilo");
             printf("\n");
             printf("\n");
             printf("\n");
