@@ -34,13 +34,12 @@ else
         if [ $minuti -ge 1 -a $minuti -le 60 ]
         then
 
-            echo
 
-        else  
+            echo 
+        else
+            
             echo
         fi
-
-
     else
         echo "L'ora inseriti non e corretta"
 
@@ -50,4 +49,26 @@ else
     fi
 fi
 
-echo "Ciao $nome sono le $ora.$minuti"      #Stampo a schermo un messaggio che saluta l'utente e che gli dice che ore sono
+
+
+
+if [ $ora -ge 1 -a $ora -le 11 ]
+then
+    echo "Buongiorno $nome sono le $ora.$minuti"
+
+    
+
+else   
+
+    if [ $ora -ge 12 -a $ora -le 18 ]
+    then
+
+        echo "Buon pomeriggio $nome sono le $ora.$minuti"
+    
+    else
+
+        echo "Buona sera $nome sono le $ora.$minuti"
+
+    fi
+
+fi
