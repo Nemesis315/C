@@ -17,23 +17,26 @@ then
     echo -n "Inserire il nome: "
     read nome
 
+    
+
 else
     echo -n "Inserire l'ora corrente: "
     read ora
 
-    echo -n "Inserire minuti correnti: "
-    read minuti
+    
 
     if [ $ora -ge 1 -a $ora -le 24 ] 
     then
 
-        if [ "$minuti" -ge 1 -a "$minuti" -le 60 ]
+        echo -n "Inserire minuti correnti: "
+        read minuti
+
+        if [ $minuti -ge 1 -a $minuti -le 60 ]
         then
 
-            echo -n "Inserire minuti correnti: "
-            read minuti
-        else
+            echo
 
+        else  
             echo
         fi
 
