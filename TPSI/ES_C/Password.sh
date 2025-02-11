@@ -14,7 +14,7 @@ then
 
     echo  "La tua password e giusta"
 
-    echo -e "\nLa password inserita è: $password"    
+    echo -e "La password inserita è: $password"    
 
 else
     echo  "Il nome inserito non e corretto"
