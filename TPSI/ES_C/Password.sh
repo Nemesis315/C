@@ -1,5 +1,8 @@
 #!/bin/bash
 
+password="Matteo"
+nome="123"
+
 clear
 
 read -p "Inserire il nome utente: " nome
@@ -7,22 +10,23 @@ read -p "Inserire il nome utente: " nome
 read -p "Inserire la password: " -s password
 
 
+if [ $password = "123" ] && [ $nome = "Matteo" ]
 
-if [ $password = "123" ] && [ $nome = "Matteo"]
 then
-    echo  "Il nome inserito e corretto"
+    echo -e  "\nIl nome inserito e corretto"
 
-    echo  "La tua password e giusta"
+    echo -e "\nLa tua password e giusta"
 
-    echo -e "La password inserita è: $password"    
+    echo -e "\nIl nome inserito è: $nome"
+    
+    echo -e "\nLa password inserita è: $password"    
 
 else
-    echo  "Il nome inserito non e corretto"
+    
+    echo -e "\nUna delle due credenziali non e stata inserita corretamente"
 
-    echo "La password inserira e sbagliata"
 fi
 
 
-echo -e "\nLa password inserita è: $password"
 
 
