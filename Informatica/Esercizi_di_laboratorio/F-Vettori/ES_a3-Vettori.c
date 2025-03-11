@@ -50,6 +50,7 @@ int main()
     if(trovato == -1)
     {
         printf("Il numero %d da lei cercato non e presente all'interno dell'arrey", Numero_da_trovare);
+        printf("\n");
     }
     else
     {
@@ -73,7 +74,7 @@ int Ricerca(int v[], int num)
     {
         if (v[i] == num)
         {
-            return num;
+            return i;
         }
         
     }
