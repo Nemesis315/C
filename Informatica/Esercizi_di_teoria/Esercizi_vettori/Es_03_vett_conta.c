@@ -32,6 +32,9 @@ int main()
 
 
     stampa_array(Vettore);
+
+
+    return 0;
 }
 
 int conta(int v[], int num)

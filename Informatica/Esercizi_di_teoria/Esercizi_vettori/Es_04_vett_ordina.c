@@ -26,7 +26,7 @@ int main()
     stampa_array(vettore);
 
 
-
+    return 0;
 }
 
 
