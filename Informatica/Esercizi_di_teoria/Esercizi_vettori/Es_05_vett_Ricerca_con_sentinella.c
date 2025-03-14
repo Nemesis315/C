@@ -26,6 +26,16 @@ int main()
 
     int r = RicercaSentinella(vettore, numero);
 
+    if (r == -1)
+    {
+        printf("Il numero da te cercato all'interno del vettore non esiste");
+        printf("\n");
+    }
+    else
+    {
+        printf("Il numero %d e presente all'interno del vettore", numero);
+        printf("\n");
+    }
 
     void stampa_array(int v[]);
 
