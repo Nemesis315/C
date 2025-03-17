@@ -17,5 +17,3 @@ do
   do
     echo -n "*"
   done
-  # Aggiunge una nuova riga
-  echo

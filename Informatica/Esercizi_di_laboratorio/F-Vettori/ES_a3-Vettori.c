@@ -74,6 +74,7 @@ int Ricerca(int v[], int num)
     {
         if (v[i] == num)
         {
+            i++;
             return i;
         }
         
