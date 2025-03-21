@@ -6,6 +6,8 @@
 
 void stampa_array(int v[]);
 
+void ordina_vettore(int v[]);
+
 
 
 
@@ -21,7 +23,7 @@ int main()
 
     // 2). Dichiarazione di un vettore di tipo intero
     
-    //     Scecificare il nume della variabile
+    //     Scecificare il nome della variabile
          
     //     ATTENZIONE: Se si vuole dichiare un vettore e obbligatorio mettere le parentesi quadre a fianco alla variabile e poi inserire all'interno delle parentesi
     //                 la costante per indicare il numero di variabili che può contenere il vettore/array.
@@ -37,10 +39,15 @@ int main()
        vettore[i] = rand() % 21;
    }
 
+    // 3). Funzione con i vettori
 
-    stampa_array(vettore);
+    //     ATTENZIONE: Quando si usa un vettore all'interno della funzione si modifica anche il contenuto del vettore all'interno del main
 
- }
+    ordina_vettore(vettore);
+
+    stampa_array(vettore); 
+
+}
 
 
 
@@ -50,6 +57,30 @@ int main()
     {
         printf("I voti che hai inserito sono: %d", v[i]);
         printf("\n");
+    }
+    
+}
+
+void ordina_vettore(int v[])
+{
+    int z;
+
+    for (int i = 0; i < N - 1 ; i++)
+    {
+        for (int j = i +1; j < N; j++)
+        {
+            if (v[i] > v[j])
+            {
+                z = v[i];
+
+                v[i] = v[j];
+
+                v[j] = z;
+            }
+            
+            
+        }
+        
     }
     
 }
