@@ -88,3 +88,13 @@ void ordina_vettore(int v[])
     }
     
 }
+
+
+
+
+
+
+
+
+
+//dio
