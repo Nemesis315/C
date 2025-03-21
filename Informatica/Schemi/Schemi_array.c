@@ -36,7 +36,7 @@ int main()
 
    for (int i = 0; i < N; i++)
    {
-       vettore[i] = rand() % 21;
+       vettore[i] = rand() % 11;
    }
 
     // 3). Funzione con i vettori
