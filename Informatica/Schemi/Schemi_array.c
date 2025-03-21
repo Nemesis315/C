@@ -18,10 +18,18 @@ void stampa_array(int v[]);
 
 int main()
 {
-  int vettore[N];
+
+    // 2). Dichiarazione di un vettore di tipo intero
+    
+    //     Scecificare il nume della variabile
+         
+    //     ATTENZIONE: Se si vuole dichiare un vettore e obbligatorio mettere le parentesi quadre a fianco alla variabile e poi inserire all'interno delle parentesi
+    //                 la costante per indicare il numero di variabili che può contenere il vettore/array.
+
+    int vettore[N];
 
 
-  srand(time(NULL));
+    srand(time(NULL));
 
 
    for (int i = 0; i < N; i++)
