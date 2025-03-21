@@ -11,7 +11,7 @@ void stampa_array(int v[]);
 
 //  1). Dichiare una costante che indica il numero di variabili all'interno del vettore
  
-#define N 11
+#define N 11 // Esempio
 
 // ATTENAZIONE: L'indice del vettore parte da 0 e arriva fino a N-1
 
@@ -26,7 +26,7 @@ int main()
     //     ATTENZIONE: Se si vuole dichiare un vettore e obbligatorio mettere le parentesi quadre a fianco alla variabile e poi inserire all'interno delle parentesi
     //                 la costante per indicare il numero di variabili che può contenere il vettore/array.
 
-    int vettore[N];
+    int vettore[N];   //Esempio
 
 
     srand(time(NULL));
