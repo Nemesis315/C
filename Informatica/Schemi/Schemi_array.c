@@ -55,7 +55,9 @@ int main()
 {
     for (int i = 0; i < N; i++)
     {
-        printf("I voti che hai inserito sono: %d", v[i]);
+        // 4). ATTENZIONE: Per stampare il contenuto di una casella di un vettore bisogna scrivere il vettore e l'indice in cui si trova il numero desiderato
+
+        printf("I voti che hai inserito sono: %d", v[i]); // Esempio
         printf("\n");
     }
     
