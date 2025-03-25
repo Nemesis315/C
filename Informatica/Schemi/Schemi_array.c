@@ -88,12 +88,3 @@ void ordina_vettore(int v[])
     }
     
 }
-
-
-
-
-
-
-
-
-
