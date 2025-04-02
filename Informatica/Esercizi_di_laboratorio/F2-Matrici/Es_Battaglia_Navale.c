@@ -1,7 +1,7 @@
 /**
- * @file Es_Battaglia_Navale.c
+ * @file es_battaglia_navale_step1.c
  * @brief Battaglia Navale - Step 1: Inizializzazione e visualizzazione del campo di gioco
- * @author Matteo Conte
+ * @author Mario Rossi
  * @version 1.0 01/04/25 Versione iniziale
  * 
  * @details
@@ -25,14 +25,14 @@
  * 
  * @param campo La matrice da inizializzare
  */
-void inizializzaCampo(char campo[][DIMENSIONE]);
+void inizializzaCampo(char campo[DIMENSIONE][DIMENSIONE]);
 
 /**
  * @brief Funzione per visualizzare il campo
  * 
  * @param campo La matrice da visualizzare
  */
-void visualizzaCampo(char campo[][DIMENSIONE]);
+void visualizzaCampo(char campo[DIMENSIONE][DIMENSIONE]);
 
 /**
  * @brief Funzione principale
@@ -45,49 +45,38 @@ int main()
 
     char campo[DIMENSIONE][DIMENSIONE];
 
-    inizializzaCampo(campo[DIMENSIONE][DIMENSIONE]);
+    inizializzaCampo(campo);
 
-
-    visualizzaCampo(campo[DIMENSIONE][DIMENSIONE]);
-
-
+    visualizzaCampo(campo);
 }
 
 /* Implementazione delle funzioni */
-void inizializzaCampo(char campo[][DIMENSIONE]) 
+void inizializzaCampo(char campo[DIMENSIONE][DIMENSIONE]) 
 {
     // Implementare la funzione per inizializzare il campo
 
-    char carattere;
-    printf("Inserire il carattere per l'acqua: ");
-    scanf("%c", &carattere);
-    
-
     for (int i = 0; i < DIMENSIONE; i++)
     {
-        for (int j = 0; i < DIMENSIONE; j++)
+        for (int j = 0; j < DIMENSIONE; j++)
         {
-            scanf("%c", campo[i][j]);
+            campo[i][j] = '~';
         }
         
     }
     
-
-
 }
 
-void visualizzaCampo(char campo[][DIMENSIONE]) 
+void visualizzaCampo(char campo[DIMENSIONE][DIMENSIONE]) 
 {
     // Implementare la funzione per visualizzare il campo
 
+    for (int i = 0; i < DIMENSIONE; i++)
     {
-        for (int i = 0; i < DIMENSIONE; i++)
+        for (int j = 0; j < DIMENSIONE; j++)
         {
-            for (int j = 0; j < DIMENSIONE; j++)
-            {
-                printf("%c \t", campo[i][j]);
-            }
-            printf("\n");
+            printf("%c \t ", campo[i][j]);
         }
+        printf("\n");
     }
+    
 }
