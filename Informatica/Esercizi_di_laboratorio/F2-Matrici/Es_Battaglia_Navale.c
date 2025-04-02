@@ -1,7 +1,7 @@
 /**
- * @file es_battaglia_navale_step1.c
+ * @file Es_Battaglia_Navale.c
  * @brief Battaglia Navale - Step 1: Inizializzazione e visualizzazione del campo di gioco
- * @author Mario Rossi
+ * @author Matteo Conte
  * @version 1.0 01/04/25 Versione iniziale
  * 
  * @details
@@ -25,14 +25,14 @@
  * 
  * @param campo La matrice da inizializzare
  */
-void inizializzaCampo(char campo[DIMENSIONE][DIMENSIONE]);
+void inizializzaCampo(char campo[][DIMENSIONE]);
 
 /**
  * @brief Funzione per visualizzare il campo
  * 
  * @param campo La matrice da visualizzare
  */
-void visualizzaCampo(char campo[DIMENSIONE][DIMENSIONE]);
+void visualizzaCampo(char campo[][DIMENSIONE]);
 
 /**
  * @brief Funzione principale
@@ -51,7 +51,7 @@ int main()
 }
 
 /* Implementazione delle funzioni */
-void inizializzaCampo(char campo[DIMENSIONE][DIMENSIONE]) 
+void inizializzaCampo(char campo[][DIMENSIONE]) 
 {
     // Implementare la funzione per inizializzare il campo
 
@@ -66,7 +66,7 @@ void inizializzaCampo(char campo[DIMENSIONE][DIMENSIONE])
     
 }
 
-void visualizzaCampo(char campo[DIMENSIONE][DIMENSIONE]) 
+void visualizzaCampo(char campo[][DIMENSIONE]) 
 {
     // Implementare la funzione per visualizzare il campo
 
