@@ -45,10 +45,10 @@ int main()
 
     char campo[DIMENSIONE][DIMENSIONE];
 
-    void inizializzaCampo(char campo[][DIMENSIONE]);
+    inizializzaCampo(campo[DIMENSIONE][DIMENSIONE]);
 
 
-    void visualizzaCampo(char campo[][DIMENSIONE]);
+    visualizzaCampo(campo[DIMENSIONE][DIMENSIONE]);
 
 
 }
@@ -61,8 +61,6 @@ void inizializzaCampo(char campo[][DIMENSIONE])
     char carattere;
     printf("Inserire il carattere per l'acqua: ");
     scanf("%c", &carattere);
-    
-
     
 
     for (int i = 0; i < DIMENSIONE; i++)
