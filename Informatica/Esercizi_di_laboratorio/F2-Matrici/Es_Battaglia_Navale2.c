@@ -62,6 +62,8 @@ int main()
 
     visualizzaCampo(campo,0);
 
+    posizionaNave(campo);
+
 }
 
 /* Implementazione delle funzioni */
@@ -84,10 +86,17 @@ void posizionaNave(char campo[DIMENSIONE][DIMENSIONE])
 {
     // Implementare la funzione per posizionare la nave casualmente
 
+    int posizione; //se il numero random e 1 la nave e orizontale, se e 0 è verticale
+
     srand(time(NULL));
 
-    
+    posizione = rand() % 2;
 
+    if (posizione == 1)
+    {
+        
+    }
+    
 }
 
 void visualizzaCampo(char campo[DIMENSIONE][DIMENSIONE], int mostraNave) 
