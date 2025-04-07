@@ -1,8 +1,8 @@
 /**
  * @file es_battaglia_navale_step2.c
  * @brief Battaglia Navale - Step 2: Posizionamento casuale della nave sul campo
- * @author Mario Rossi
- * @version 1.0 01/04/25 Versione iniziale
+ * @author Matteo Conte
+ * @version 2.0 07/04/25 Versione iniziale
  * 
  * @details
  * OBIETTIVO DELL'ESERCIZIO:
@@ -52,12 +52,21 @@ void visualizzaCampo(char campo[DIMENSIONE][DIMENSIONE], int mostraNave);
  * 
  * @return int Codice di uscita del programma
  */
-int main() {
+int main() 
+{
     // Implementare il main
+
+    char campo[DIMENSIONE][DIMENSIONE];
+
+    inizializzaCampo(campo);
+
+    visualizzaCampo(campo,0);
+
 }
 
 /* Implementazione delle funzioni */
-void inizializzaCampo(char campo[DIMENSIONE][DIMENSIONE]) {
+void inizializzaCampo(char campo[DIMENSIONE][DIMENSIONE]) 
+{
     // Implementare la funzione per inizializzare il campo
     
     for (int i = 0; i < DIMENSIONE; i++)
@@ -71,11 +80,18 @@ void inizializzaCampo(char campo[DIMENSIONE][DIMENSIONE]) {
     
 }
 
-void posizionaNave(char campo[DIMENSIONE][DIMENSIONE]) {
+void posizionaNave(char campo[DIMENSIONE][DIMENSIONE]) 
+{
     // Implementare la funzione per posizionare la nave casualmente
+
+    srand(time(NULL));
+
+    
+
 }
 
-void visualizzaCampo(char campo[DIMENSIONE][DIMENSIONE], int mostraNave) {
+void visualizzaCampo(char campo[DIMENSIONE][DIMENSIONE], int mostraNave) 
+{
     // Implementare la funzione per visualizzare il campo
     
     for (int i = 0; i < DIMENSIONE; i++)
