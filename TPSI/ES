@@ -1,0 +1,18 @@
+@echo off
+
+SET /P nome="Inserire un nome: "
+SET /P cognome="Inserire il cognome: "
+SET /P ora="Inserire ora corrente(NO minuti e secondi): "
+
+IF %ora% GEQ 18 && %ora% LEQ 24 (
+    
+   ECHO "Buon Giorno %nome% %cognome%"
+   PAUSE
+
+) ELSE (
+   
+   ECHO "Buona Sera %nome% %cognome%"
+   PAUSE
+)
+
+PAUSE

@@ -21,7 +21,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define DIMENSIONE 5
+#define DIMENSIONE 10
 #define LUNGHEZZA_NAVE 3
 
 /* Prototipi delle funzioni */
@@ -64,6 +64,12 @@ int main()
 
     posizionaNave(campo);
 
+    printf("\n");
+    printf("\n");
+    printf("\n");
+
+    visualizzaCampo(campo,0);
+
 }
 
 /* Implementazione delle funzioni */
@@ -87,13 +93,36 @@ void posizionaNave(char campo[DIMENSIONE][DIMENSIONE])
     // Implementare la funzione per posizionare la nave casualmente
 
     int posizione; //se il numero random e 1 la nave e orizontale, se e 0 è verticale
+    int riga;
+    int colonna;
 
     srand(time(NULL));
 
     posizione = rand() % 2;
 
+    riga = rand() % (DIMENSIONE - LUNGHEZZA_NAVE);
+    
+
     if (posizione == 1)
     {
+        colonna = rand() % (DIMENSIONE - LUNGHEZZA_NAVE);
+
+        for (int i = 0; i < LUNGHEZZA_NAVE; i++)
+        {
+            campo[riga][colonna] = '#';
+            colonna++;
+        }
+        
+    }
+    else
+    {
+        riga = rand() % (DIMENSIONE - LUNGHEZZA_NAVE);
+
+        for (int j = 0; j < LUNGHEZZA_NAVE; j++)
+        {
+            campo[riga][colonna] = '#';
+            riga++;
+        }
         
     }
     
