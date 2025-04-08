@@ -153,6 +153,41 @@ void visualizzaCampo(char campo[DIMENSIONE][DIMENSIONE], int mostraNave)
     
 }
 
-int spara(char campo[DIMENSIONE][DIMENSIONE], int riga, int colonna) {
+int spara(char campo[DIMENSIONE][DIMENSIONE], int riga, int colonna) 
+{
     // Implementare la funzione per gestire uno sparo
+    
+    if (riga < DIMENSIONE && colonna < DIMENSIONE)
+    {
+        return -1;
+    }
+    else
+    {
+        
+        if ( campo[riga][colonna] == '#')
+        {
+            campo[riga][colonna] = 'X';
+
+            printf("Brava hai colpito la nave");
+
+            return 1;
+        }
+        else
+        {
+            campo[riga][colonna] = 'O';
+            
+            printf("Ritenta sarai più fortunato");
+
+            return 0;
+        }
+
+    }
+    
+    
+    
+    
+    
+
+
+
 }
