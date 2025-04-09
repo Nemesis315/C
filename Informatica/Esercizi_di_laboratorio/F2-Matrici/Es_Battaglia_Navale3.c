@@ -2,7 +2,7 @@
  * @file es_battaglia_navale_step2.c
  * @brief Battaglia Navale - Step 2: Posizionamento casuale della nave sul campo
  * @author Matteo Conte
- * @version 3.3 07/04/25 Versione iniziale
+ * @version 3.4 07/04/25 Versione iniziale
  * 
  * @details
  * OBIETTIVO DELL'ESERCIZIO:
@@ -115,11 +115,12 @@ void posizionaNave(char campo[DIMENSIONE][DIMENSIONE])
 
     posizione = rand() % 2;
 
-    riga = rand() % (DIMENSIONE - LUNGHEZZA_NAVE);
+    
     
 
     if (posizione == 1)
     {
+        riga = rand() % (DIMENSIONE);
         colonna = rand() % (DIMENSIONE - LUNGHEZZA_NAVE);
 
         for (int i = 0; i < LUNGHEZZA_NAVE; i++)
@@ -132,6 +133,7 @@ void posizionaNave(char campo[DIMENSIONE][DIMENSIONE])
     else
     {
         riga = rand() % (DIMENSIONE - LUNGHEZZA_NAVE);
+        colonna = rand() % (DIMENSIONE);
 
         for (int j = 0; j < LUNGHEZZA_NAVE; j++)
         {
