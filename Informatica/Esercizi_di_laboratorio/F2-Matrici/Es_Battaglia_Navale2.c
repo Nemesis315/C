@@ -2,7 +2,7 @@
  * @file es_battaglia_navale_step2.c
  * @brief Battaglia Navale - Step 2: Posizionamento casuale della nave sul campo
  * @author Matteo Conte
- * @version 2.2 07/04/25 Versione iniziale
+ * @version 2.3 07/04/25 Versione iniziale
  * 
  * @details
  * OBIETTIVO DELL'ESERCIZIO:
@@ -143,11 +143,11 @@ void visualizzaCampo(char campo[DIMENSIONE][DIMENSIONE], int mostraNave)
         {
             if (mostraNave && campo[i][j] == '#')
             {
-                printf("~ ");
+                printf("~ \t ");
             }
             else
             {
-                printf("%c ", campo[i][j]);
+                printf("%c \t ", campo[i][j]);
             }
               
         }
