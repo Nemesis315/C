@@ -56,11 +56,16 @@ int main()
 {
     // Implementare il main
 
+    int i;
+
     char campo[DIMENSIONE][DIMENSIONE];
 
     inizializzaCampo(campo);
 
     visualizzaCampo(campo,0);
+
+    printf("Inserire 1 per visualizzare la nave/0 per non visualizzarla");
+    scanf("%d", &i);
 
     posizionaNave(campo);
 
@@ -136,7 +141,19 @@ void visualizzaCampo(char campo[DIMENSIONE][DIMENSIONE], int mostraNave)
     {
         for (int j = 0; j < DIMENSIONE; j++)
         {
-            printf("%c \t ", campo[i][j]);
+            if (mostraNave == 1)
+            {
+                printf("%c \t ", campo[i][j]);
+            }
+            else
+            {
+                if (campo[i][j] == '#')
+                {
+                    campo[i][j] = '~';
+                }
+                
+            }
+            
         }
         printf("\n");
     }

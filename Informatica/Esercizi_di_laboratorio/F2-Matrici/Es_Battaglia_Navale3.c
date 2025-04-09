@@ -146,7 +146,19 @@ void visualizzaCampo(char campo[DIMENSIONE][DIMENSIONE], int mostraNave)
     {
         for (int j = 0; j < DIMENSIONE; j++)
         {
-            printf("%c \t ", campo[i][j]);
+            if (mostraNave == 1)
+            {
+                printf("%c \t ", campo[i][j]);
+            }
+            else
+            {
+                if (campo[i][j] == '#')
+                {
+                    campo[i][j] = '~';
+                }
+                
+            }
+            
         }
         printf("\n");
     }
@@ -164,7 +176,7 @@ int spara(char campo[DIMENSIONE][DIMENSIONE], int riga, int colonna)
     else
     {
         
-        if ( campo[riga][colonna] == '#')
+        if (campo[riga][colonna] == '#')
         {
             campo[riga][colonna] = 'X';
 
@@ -183,11 +195,5 @@ int spara(char campo[DIMENSIONE][DIMENSIONE], int riga, int colonna)
 
     }
     
-    
-    
-    
-    
-
-
-
+    printf("Le coordinate non coincidono con la grandezza del campo di gioco");
 }
