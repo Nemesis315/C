@@ -8,6 +8,8 @@ void carica_random(int v[]);
 
 void stampa_array(int v[]);
 
+void copia_arrey(int v[], int v2[], int v3[]);
+
 int main()
 {
     int Vettore1[N], Vettore2[N], Vettore3[N];
@@ -15,6 +17,13 @@ int main()
     carica_random(Vettore1);
 
     stampa_array(Vettore1);
+
+    copia_arrey(Vettore1,Vettore2,Vettore3);
+
+    stampa_array(Vettore2);
+
+    stampa_array(Vettore3);
+
 
 
 
@@ -42,4 +51,26 @@ void stampa_array(int v[])
     }
     printf("\n");
     
+}
+
+void copia_arrey(int v[], int v2[], int v3[])
+{
+    int cont = 0;
+
+    int cont1 = 0;
+
+    for (int i = 0; i < N; i++)
+    {
+        if (v[i] >= 0)
+        {
+            v[i] = v2[cont];
+            cont ++;
+        }
+        else
+        {
+            v[i] = v3[cont1];
+            cont1 ++;
+        }
+    
+    }
 }
