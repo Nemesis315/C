@@ -2,13 +2,15 @@
 
 #define N 100
 
-void leggi_stringa( char str[]);
+void leggi_stringa( char str[] );
 
-void stampa_stringa( char str[]);
+void stampa_stringa( char str[] );
 
+int lunghezza_stringa( char str[] );
 
 int main()
 {
+    int r;
     char str1 [N];
 
     leggi_stringa(str1);
@@ -17,7 +19,12 @@ int main()
     printf("\n");
 
     stampa_stringa(str1);
+    printf("\n");
 
+    r = lunghezza_stringa(str1);
+
+    printf("La lunghezza della stringa e: %d", r);
+    printf("\n");
 
 
 
@@ -28,7 +35,7 @@ int main()
 
 
 
-void leggi_stringa( char str[])
+void leggi_stringa( char str[] )
 {
     char fine_str = '#'; int i = 0;
     printf("Per dire che la stringa e terminata digitare #");
@@ -43,7 +50,7 @@ void leggi_stringa( char str[])
 }
 
 
-void stampa_stringa( char str[])
+void stampa_stringa( char str[] )
 {
     int i = 0;
     while (str[i] != '\0')
@@ -52,4 +59,17 @@ void stampa_stringa( char str[])
         i++;
     }
     
+}
+
+
+int lunghezza_stringa( char str[] )
+{
+    int i = 0; int cont = 0;
+    while (str[i] != '\0')
+    {
+        i++;
+        cont++;
+    }
+
+    return cont;
 }
