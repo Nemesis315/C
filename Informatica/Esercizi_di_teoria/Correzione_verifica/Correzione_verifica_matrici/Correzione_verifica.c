@@ -11,25 +11,49 @@ void stampaMat(int m[][C]);
 
 void dispari(int m[][C], int y);
 
+int pariMat(int m[][C]);
+
+void diagonale(int m[][C]);
+
 
 
 
 
 int main()
 {
-    int Matrice[R][C]; int y;
+    int Matrice[R][C]; int y; int r;
 
     casualMat(Matrice);
 
     stampaMat(Matrice);
 
-    printf("Inserire un numero compreso tra 1 e 10:");
-    printf("\n");
-    scanf("%d",&y);
+    //printf("Inserire un numero compreso tra 1 e 10:");
+    //printf("\n");
+    //scanf("%d",&y);
 
-    dispari(Matrice,y);
+    //dispari(Matrice,y);
 
-    stampaMat(Matrice);
+    //stampaMat(Matrice);
+
+    //r = pariMat(Matrice);
+
+    //if (r == 0)
+    //{
+    //    printf("La matrie nn e pari");
+    //    printf("\n");
+    //}
+    //else
+    //{
+    //    printf("La matrice e pari");
+    //    printf("\n");
+    //}
+
+
+
+
+    
+    
+
 
 
 
@@ -82,4 +106,30 @@ void dispari(int m[][C], int y)
             
         }
     }    
+}
+
+int pariMat(int m[][C])
+{
+    int i = 0; int j = 0;
+
+    for ( i = 0; i < R; i++)
+    {
+        for ( j = 0; j < C; j++)
+        {
+            if (m[i][j] % 2 == 1)
+            {
+                return 0;
+            }
+            
+        }
+        
+    }
+
+    return 1;
+    
+}
+
+void diagonale(int m[][C])
+{
+    
 }
