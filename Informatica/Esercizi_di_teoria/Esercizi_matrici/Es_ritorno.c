@@ -53,17 +53,7 @@ void carica_random (int m[][C])
 
 void stampa_matrice (int m[][C])
 {
-    int i;
-    int j;
 
-    for ( i = 0; i < R; i++)
-    {
-        for ( j = 0; j < C; j++)
-        {
-            printf("%d \t", m[i][j]);
-        }
-        printf("\n");
-    }
     
 }
 
