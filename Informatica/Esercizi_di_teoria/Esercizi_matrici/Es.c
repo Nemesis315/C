@@ -20,8 +20,6 @@ void stampa_matrice(int m[R][C]);
 // 6) Conta quanti elementi della colonna k sono divisori di n
 int conta_divisori(int m[R][C], int k, int n);
 
-
-
 int main() {
     int Matrice[R][C];
 
@@ -43,9 +41,9 @@ void carica_random(int v[], int x, int y)
 
     if (x > y) 
     {
-        int temp = x;
+        int temporaneo = x;
         x = y;
-        y = temp;
+        y = temporaneo;
     }
     for (int i = 0; i < C; i++) 
     {
