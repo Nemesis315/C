@@ -1,6 +1,3 @@
-
-
-
 #include<stdio.h>
 #include<stdlib.h>
 #include<time.h>
@@ -15,7 +12,7 @@ void stampaMat(int m[][C]);
 // 1. Creare matrice (5 x 5)
 // 2. Funzioni di stampa e carica
 // 3. Visualizzare la matrice
-// 4. Comtare numeri dispari
+// 4. Contare numeri dispari
 int main()
 {
     int Matrice[R][C];
