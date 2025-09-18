@@ -23,5 +23,13 @@ int main()
         scanf("%d", &S1.Voti[i]);
     }
 
+    printf("Inserire il proprio nome: ");
+    scanf("%s", S1.Nome);
+
+    printf("Inserire il proprio cognome: ");
     scanf("%s", S1.Cognome);
+
+    S2 = S1;
+
+    return 0;
 }
