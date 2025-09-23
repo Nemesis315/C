@@ -15,6 +15,8 @@ int conta_Nprimi(int m[][C]);
 
 int main()
 {
+    srand(time(NULL));
+
     int Matrice[R][C];
 
     int N_primi = 0;
@@ -38,7 +40,7 @@ void carica_random (int m[][C])
 {
     int i,j;
 
-    srand(time(NULL));
+    
 
     for ( i = 0; i < R; i++)
     {

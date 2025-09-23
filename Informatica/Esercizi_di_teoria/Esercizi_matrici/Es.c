@@ -9,7 +9,7 @@
 int divisore(int x, int y);
 
 // 2) Riempie un vettore con numeri random tra x e y (inclusi)
-void carica_random(int v[], int x, int y);
+void carica_random(int v[]);
 
 // 3) Riempie una matrice usando carica_random per ogni riga
 void carica_matrice(int m[R][C]);
@@ -20,7 +20,10 @@ void stampa_matrice(int m[R][C]);
 // 6) Conta quanti elementi della colonna k sono divisori di n
 int conta_divisori(int m[R][C], int k, int n);
 
-int main() {
+int main() 
+{
+    srand(time(NULL));
+
     int Matrice[R][C];
 
     carica_matrice(Matrice);
@@ -35,19 +38,11 @@ int divisore(int x, int y)
     return (y % x == 0) ? 1 : 0;
 }
 
-void carica_random(int v[], int x, int y) 
+void carica_random(int v[])
 {
-    srand(time(NULL));
-
-    if (x > y) 
-    {
-        int temporaneo = x;
-        x = y;
-        y = temporaneo;
-    }
     for (int i = 0; i < C; i++) 
     {
-        v[i] = x + rand() % (y - x + 1);
+        v[i] = rand() % 16 + 10;
     }
 }
 
@@ -55,7 +50,7 @@ void carica_matrice(int m[R][C])
 {
     for (int i = 0; i < R; i++) 
     {
-        carica_random(m[i], 1, 20);  // intervallo a scelta
+        carica_random(m[i]); 
     }
 }
 
