@@ -1,35 +1,22 @@
 #include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <time.h>
 
+#define N 5
 
-#define N 10
-
-struct Es_N01
+struct Data
 {
-    char Cognome[N];
+    int giorno;
+    
+    int mese;
 
-    char Nome[N];
+    int anno;
+} typedef data;
 
-    int Voti[8];
-} typedef Es_01;
-
-int main()
+struct Nascita
 {
-    Es_01 S1,S2;
+    
+};
 
-    for (int i = 0; i < 8; i++)
-    {
-        printf("Inserire un numero (compreso tra 2 e 10):");
-        
-        scanf("%d", &S1.Voti[i]);
-    }
 
-    printf("Inserire il proprio nome: ");
-    scanf("%s", S1.Nome);
-
-    printf("Inserire il proprio cognome: ");
-    scanf("%s", S1.Cognome);
-
-    S2 = S1;
-
-    return 0;
-}
