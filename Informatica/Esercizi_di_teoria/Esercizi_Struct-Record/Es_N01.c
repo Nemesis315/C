@@ -5,6 +5,8 @@
 
 #define N 20
 
+void caricatabella( persona s[] );
+
 struct Data
 {
     int giorno;
@@ -12,6 +14,7 @@ struct Data
     int mese;
 
     int anno;
+
 } typedef data;
 
 struct Nascita
@@ -19,7 +22,23 @@ struct Nascita
     char Nome_Cognome[N];
 
     data Nascita;
-    
+
 } typedef nascita;
 
+struct Persona
+{
+    nascita Persona;
+    
+    int voti[N];
+} typedef persona;
 
+void caricatabella( persona s[] )
+{
+    int i;
+
+    for ( i = 0; i < N; i++)
+    {
+        
+    }
+    
+}
