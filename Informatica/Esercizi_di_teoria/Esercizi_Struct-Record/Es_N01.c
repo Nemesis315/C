@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define N 5
+#define N 20
 
 struct Data
 {
@@ -16,7 +16,10 @@ struct Data
 
 struct Nascita
 {
+    char Nome_Cognome[N];
+
+    data Nascita;
     
-};
+} typedef nascita;
 
 
