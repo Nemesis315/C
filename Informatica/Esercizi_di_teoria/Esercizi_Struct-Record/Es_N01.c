@@ -34,11 +34,5 @@ struct Persona
 
 void caricatabella( persona s[] )
 {
-    int i;
 
-    for ( i = 0; i < N; i++)
-    {
-        
-    }
-    
 }
