@@ -5,7 +5,7 @@
 #define R 10
 #define C 10
 
-void casualiVet (int vet[], int x, int y);
+void casualiVet (int vet[]);
 
 void casualiMat (int mat[][C]);
 
@@ -29,8 +29,6 @@ int main()
 
     casualiMat(Matrice);
 
-    r = pariMat(Matrice);
-
     printf("Inserisci un numero tra 1 e 10: ");
     scanf("%d", &Div);
 
@@ -46,13 +44,13 @@ int main()
 
 }
 
-void casualiVet (int vet[], int x, int y)
+void casualiVet (int vet[])
 {
     int i;
 
     for ( i = 0; i < C; i++)
     {
-        vet[i] = rand() % (57 - 20) + 20;
+        vet[i] = rand() % 21 ;
     }
     
 }
@@ -63,7 +61,7 @@ void casualiMat (int mat[][C])
 
     for ( i = 0; i < R; i++)
     {
-        casualiVet( mat[i], x, y);
+        casualiVet ( mat[i]) ;
     }
     
 }
@@ -80,30 +78,6 @@ void stampaMatrice(int mat[][C])
         printf("\n");
     }
     
-}
-
-int pariV (int vet[] )
-{
-    for (int i = 0; i < C; i++)
-    {
-        if (vet[i] % 2 == 1)
-        {
-            return 0;
-        }
-        
-    }
-    return 1;
-}
-
-int pariMat( int mat[][C])
-{
-    int cont = 0; int i;
-
-    for ( i = 0; i < R; i++)
-    {
-        cont+= pariV(mat[i]);
-    }
-    return cont;
 }
 
 int conta(int mat[][C], int k, int x)
