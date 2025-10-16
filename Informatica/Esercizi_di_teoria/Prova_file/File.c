@@ -29,8 +29,6 @@ int main()
         printf("Il file non puo essere aperto");
 
         printf("\n");
-
-        system("pause");
     }
     
 }
