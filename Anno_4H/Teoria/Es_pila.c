@@ -95,5 +95,6 @@ int Top(int arr[]) //visualizza sul monitor elemento in cima
 
 int push(int [],int x) //inserisce x in cima,restituisce -1 se non è andato a buon fine l'inserimento 1 altrimenti
 {
+    top++;
     
 }
