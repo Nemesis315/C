@@ -6,7 +6,7 @@ int is_empty(int []); //restituisce 1 se vuota, 0 altrimenti
 
 int is_full(int []); //restituisce 1 se piena, 0 altrimenti
 
-int top2(int []); //visualizza sul monitor elemento in cima
+int Top(int []); //visualizza sul monitor elemento in cima
 
 int push(int [],int x); //inserisce x in cima,restituisce -1 se non è andato a buon fine l'inserimento 1 altrimenti
 
@@ -18,23 +18,43 @@ int main()
     
     int emp,full;
 
+    int x;
+
     if(is_empty(stack))
 
     {
         printf("pila vuota");
+        printf("\n");
     }
     else
     {
         printf("Pila non vuota");
+        printf("\n");
     }
     if(is_full(stack))
     {
         printf("pila piena");
+        printf("\n");
     }
     else
     {   
-        printf("\npila non piena");
+        printf("pila non piena");
+        printf("\n");
     }
+
+    x = Top(stack);
+
+    if ( x == 0 )
+    {
+        printf("Pila vuota non ci sono elementi al suo interno");
+        printf("\n");
+    }
+    else
+    {
+        printf("%d", x);
+        printf("\n");
+    }
+    
 }
 
 
@@ -51,11 +71,29 @@ int is_empty(int arr[])
 
 int is_full(int arr[])
 {
-    if(top==N-1)
+    if( top == N-1 )
     {
         return 1;
     }
 
     return 0;
 
+}
+
+
+int Top(int arr[]) //visualizza sul monitor elemento in cima
+{
+    if (top == -1)
+    {
+        return 0;
+    }
+    else
+    {
+        return arr[top];
+    }
+}
+
+int push(int [],int x) //inserisce x in cima,restituisce -1 se non è andato a buon fine l'inserimento 1 altrimenti
+{
+    
 }
