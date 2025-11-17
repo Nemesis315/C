@@ -60,7 +60,7 @@ int main()
 
 int is_empty(int arr[])
 {
-    if(top==-1)
+    if( top==-1 )
     {
         return 1;
     }
@@ -83,7 +83,7 @@ int is_full(int arr[])
 
 int Top(int arr[]) //visualizza sul monitor elemento in cima
 {
-    if (top == -1)
+    if ( is_empty(arr) == 1 )
     {
         return 0;
     }
@@ -93,8 +93,29 @@ int Top(int arr[]) //visualizza sul monitor elemento in cima
     }
 }
 
-int push(int [],int x) //inserisce x in cima,restituisce -1 se non è andato a buon fine l'inserimento 1 altrimenti
+int push(int arr[],int x) //inserisce x in cima,restituisce -1 se non è andato a buon fine l'inserimento 1 altrimenti
 {
+    if ( is_full(arr) == 1)
+    {
+        return -1;
+    }
+
     top++;
-    
+
+    arr[top] = x;
+
+    return 1;
+}
+
+int pop(int arr[]) //cancella elemento in cima, restituisce -1 se non è andato a buon fine
+{
+    if ( is_empty(arr) == 1)
+    {
+        return -1;
+    }
+
+    top--;
+
+    return arr[top+1];
+
 }
