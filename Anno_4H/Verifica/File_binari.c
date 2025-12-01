@@ -7,33 +7,36 @@
 
 void scriviFile (char nomefile[], int k);
 
-struct 
+void leggiFile (char nomefile[], char a);
+
+typedef struct
 {
     char cognome[N];
-
     int giorno;
-
     int mese;
-
     int anno;
-
     int voti[8];
-
-} typedef studente;
+} studente;
 
 
 int main()
 {
-    int x;
+    int x; char c;
 
     srand(time(NULL));
 
-    char nomeFile[N] = { "prova.dat" };
+    char nomeFile[N] = "prova.dat";
 
-    printf("Inserisci quanti record vuoi scrivere nel file: ");
+    printf("Inserisci quanti record vuoi scrivere nel file:\n");
     scanf("%d", &x);
 
     scriviFile(nomeFile, x);
+
+    printf("Inserisci la lettera iniziale del cognome da cercare:\n");
+
+    scanf(" %c", &c);
+
+    leggiFile(nomeFile, c);
 
     return 0;
 }
@@ -50,16 +53,16 @@ void scriviFile (char nomefile[], int k)
 
     Fp = fopen(nomefile, "wb");
 
-    for (int i = 0; i < k; i++)
+    for (int i = 0; i <= k; i++)
     {
-        printf("Inserire il proprio cognome: ");
+        printf("Inserire il proprio cognome:\n");
         scanf("%s", buffer.cognome);
 
-        printf("Inserire il giorno di nascita: ");
-        scanf("%d", buffer.giorno);
+        printf("Inserire il giorno di nascita:\n");
+        scanf("%d", &buffer.giorno);
 
-        printf("Inserire l'anno di nascita: ");
-        scanf("%d", buffer.anno);
+        printf("Inserire l'anno di nascita:\n");
+        scanf("%d", &buffer.anno);
 
         buffer.mese = t;
 
@@ -74,3 +77,31 @@ void scriviFile (char nomefile[], int k)
     fclose(Fp);
 }
 
+void leggiFile (char nomefile[], char a)
+{
+    FILE *Fp;
+
+    studente buffer;
+
+    Fp = fopen(nomefile, "rb");
+
+    while (!feof(Fp))
+    {
+       fread(&buffer, sizeof(studente), 1, Fp);
+
+       if (buffer.cognome[0] == a)
+       {
+            printf("Cognome: %s\n", buffer.cognome);
+            printf("Data di nascita: %d/%d/%d\n", buffer.giorno, buffer.mese, buffer.anno);
+            printf("Voti: ");
+            for (int j = 0; j < 8; j++)
+            {
+                printf("%d ", buffer.voti[j]);
+            }
+            printf("\n");
+       }
+       
+    }
+
+    fclose(Fp);
+}
