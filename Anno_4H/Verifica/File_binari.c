@@ -68,10 +68,6 @@ void scriviFile (char nomefile[], int k)
             buffer.voti[j] = rand() % 10 + 1;
         }
 
-        
-
-        
-
         fwrite(&buffer, sizeof(studente), 1 , Fp);
     }
     
