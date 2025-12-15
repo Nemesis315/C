@@ -23,15 +23,59 @@ int main()
     char nome_file[N] = { "student.dat" };
 
     int x;
+    int scelta = -1;
+    int matricola;
 
-    printf("Quanti studenti vuoi inserire nel file? ");
-    scanf("%d", &x);
+    while (scelta != 0)
+    {
+        printf("\nMenu:\n");
+        printf("1. Inserisci studenti (sovrascrive il file)\n");
+        printf("2. Visualizza studenti\n");
+        printf("3. Cerca studente per matricola\n");
+        printf("4. Aggiungi studente\n");
+        printf("0. Esci\n");
+        printf("Scelta: ");
 
-    scrivi_file(nome_file, x);
+        if (scanf("%d", &scelta) != 1) {
+            while (getchar() != '\n');
+            printf("Input non valido.\n");
+            scelta = -1;
+            continue;
+        }
 
-    leggi_file(nome_file);
-
-    cerca_matricola(nome_file, 002);
+        switch (scelta)
+        {
+            case 1:
+                printf("Quanti studenti vuoi inserire nel file? ");
+                if (scanf("%d", &x) == 1)
+                    scrivi_file(nome_file, x);
+                else {
+                    while (getchar() != '\n');
+                    printf("Numero non valido.\n");
+                }
+                break;
+            case 2:
+                leggi_file(nome_file);
+                break;
+            case 3:
+                printf("Inserisci la matricola da cercare: ");
+                if (scanf("%d", &matricola) == 1)
+                    cerca_matricola(nome_file, matricola);
+                else {
+                    while (getchar() != '\n');
+                    printf("Matricola non valida.\n");
+                }
+                break;
+            case 4:
+                aggiungi_studente(nome_file);
+                break;
+            case 0:
+                printf("Uscita.\n");
+                break;
+            default:
+                printf("Scelta non valida.\n");
+        }
+    }
 
     return 0;  
 
