@@ -9,6 +9,9 @@ void cerca_matricola(char nome_file[], int matricola);
 
 void aggiungi_studente(char nome_file[]);
 
+void correggi_media(char nome_file[], int matricola, float nuova_media);
+
+
 int menu (void);
 
 struct
@@ -59,6 +62,20 @@ int main()
         case 4:
             aggiungi_studente(nome_file);
 
+            break;
+        case 5:
+            printf("Inserisci la matricola dello studente di cui vuoi correggere la media: ");
+
+            scanf("%d", &matricola);
+
+            float nuova_media;
+
+            printf("Inserisci la nuova media: ");
+
+            scanf("%f", &nuova_media);
+
+            correggi_media(nome_file, matricola, nuova_media);
+            
             break;
         case 0:
             printf("Arrivederci e buona giornata");
@@ -182,6 +199,27 @@ void aggiungi_studente(char nome_file[])
     fclose(Fp);
 }
 
+void correggi_media(char nome_file[], int matricola, float nuova_media)
+{
+    Studente buffer; 
+    FILE *Fp;
+
+    Fp = fopen(nome_file, "r+b");
+
+    while (fread(&buffer, sizeof(Studente), 1, Fp) > 0)
+    {
+        if (buffer.matricola == matricola)
+        {
+            buffer.media = nuova_media;
+            fseek(Fp, -sizeof(Studente), SEEK_CUR);
+            fwrite(&buffer, sizeof(Studente), 1, Fp);
+            break;
+        }
+    }
+
+    fclose(Fp);
+}
+
 int menu(void)
 {
     int scelta;
@@ -192,6 +230,8 @@ int menu(void)
     printf("Digita 3 cercare studente tramite matricola");
     printf("\n");
     printf("Digita 4 aggiungere uno studente al file");
+    printf("\n");
+    printf("Digita 5 correggere la media di uno studente");
     printf("\n");
     printf("Digita 0 per uscire dal menu");
     printf("\n");
