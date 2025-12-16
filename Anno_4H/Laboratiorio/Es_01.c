@@ -60,7 +60,10 @@ int main()
             aggiungi_studente(nome_file);
 
             break;
-
+        case 0:
+            printf("Arrivederci e buona giornata");
+            printf("\n");
+            break;
         default:
             printf("Hai sbagliato a inserire il numero tra quelli richiesti reinseriscilo");
             printf("\n");
