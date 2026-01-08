@@ -49,5 +49,7 @@ int main() //funzione principale
 
     f1.stampa(); //chiamo il metodo stampa per l'oggetto f1
 
+    cout << endl; //vado a capo
+    
     return 0;
 }
