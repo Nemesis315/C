@@ -13,11 +13,11 @@ class Frazione //Creo la classe Frazione
         void setNumeratore(int n) //metodo per settare il numeratore
         {
             numeratore = n;
-        };
+        }
         void setDenominatore(int d) //metodo per settare il denominatore
         {
             denominatore = d;
-        };
+        }
 
         int getNumeratore() //metodo per ottenere il numeratore
         {
@@ -46,7 +46,7 @@ int main() //funzione principale
     int n1 = f1.getNumeratore(); //ottengo il numeratore di f1 e lo salvo in n1
 
     cout << "La frazione e': "; //stampo a video la frase
-    
+
     f1.stampa(); //chiamo il metodo stampa per l'oggetto f1
 
     return 0;
