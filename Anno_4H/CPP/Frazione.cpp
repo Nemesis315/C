@@ -29,6 +29,24 @@ class Frazione //Creo la classe Frazione
             return denominatore;
         }
 
+        int MCD(int x, int y) //funzione per calcolare il massimo comune divisore
+        {
+            while (y != 0) //finche y non e' uguale a 0
+            {
+                int r = x % y; //calcolo il resto della divisione tra x e y
+                x = y; //assegno y a x
+                y = r; //assegno r a y
+            }
+            return x; //ritorno il valore di x
+        }
+
+        void semplifica() //metodo per semplificare la frazione
+        {
+            int r = MCD(numeratore, denominatore); //calcolo il massimo comune divisore tra numeratore e denominatore
+            numeratore /= r; //divido il numeratore per il massimo comune divisore
+            denominatore /= r; //divido il denominatore per il massimo comune divisore
+        }
+
         void stampa() //metodo per stampare la frazione
         {
             cout << numeratore << "/" << denominatore;
@@ -41,9 +59,11 @@ int main() //funzione principale
 
     f1.setNumeratore(12); //setto il numeratore di f1 a 12
 
-    f1.setDenominatore(4); //setto il denominatore di f1 a 4
+    f1.setDenominatore(16); //setto il denominatore di f1 a 4
 
-    int n1 = f1.getNumeratore(); //ottengo il numeratore di f1 e lo salvo in n1
+    //int n1 = f1.getNumeratore(); //ottengo il numeratore di f1 e lo salvo in n1
+
+    f1.semplifica(); //chiamo il metodo semplifica per l'oggetto f1
 
     cout << "La frazione e': "; //stampo a video la frase
 
