@@ -63,7 +63,7 @@ int main() //funzione principale
 {
     Frazione f1,f2; //creazione degli oggetti f1 e f2 della classe Frazione
 
-    cout << "Inserire numeratore della frazione: "; //stampo a video la frase
+    cout << "Inserire numeratore della frazione: "; //stampo a schermo la frase
 
     int n; //dichiarazione variabile intera n
 
@@ -73,7 +73,7 @@ int main() //funzione principale
 
     f1.setNumeratore(n); //setto il numeratore di f1 al valore
 
-    cout << "Inserire denominatore della frazione: "; //stampo a video la frase
+    cout << "Inserire denominatore della frazione: "; //stampo a schermo la frase
 
     cin >> d; //leggo da tastiera il valore di d
 
@@ -83,7 +83,7 @@ int main() //funzione principale
 
     f1.semplifica(); //chiamo il metodo semplifica per l'oggetto f1
 
-    cout << "La frazione e': "; //stampo a video la frase
+    cout << "La frazione e': "; //stampo a schermo la frase
 
     f1.stampa(); //chiamo il metodo stampa per l'oggetto f1
 
