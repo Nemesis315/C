@@ -31,15 +31,21 @@ class Frazione //Creo la classe Frazione
 
         int MCD(int x, int y) //funzione per calcolare il massimo comune divisore
         {
-            while (y != 0) //finche y non e' uguale a 0
+            while (x != y)
             {
-                int r = x % y; //calcolo il resto della divisione tra x e y
-                x = y; //assegno y a x
-                y = r; //assegno r a y
+                if (x > y)
+                {
+                    x = x - y;
+                }
+                else
+                {
+                    y = y -x;
+                }
             }
-            return x; //ritorno il valore di x
-        }
 
+            return x;
+        }
+        
         void semplifica() //metodo per semplificare la frazione
         {
             int r = MCD(numeratore, denominatore); //calcolo il massimo comune divisore tra numeratore e denominatore
