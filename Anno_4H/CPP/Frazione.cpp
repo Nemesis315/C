@@ -39,7 +39,7 @@ class Frazione //Creo la classe Frazione
                 }
                 else
                 {
-                    y = y -x;
+                    y = y - x;
                 }
             }
 
@@ -62,18 +62,18 @@ class Frazione //Creo la classe Frazione
 int main() //funzione principale
 {
     Frazione f1,f2; //creazione degli oggetti f1 e f2 della classe Frazione
-    
+
     cout << "Inserire numeratore della frazione: "; //stampo a video la frase
 
     int n; //dichiarazione variabile intera n
+
+    int d; //dichiarazione variabile intera d
 
     cin >> n; //leggo da tastiera il valore di n
 
     f1.setNumeratore(n); //setto il numeratore di f1 al valore
 
     cout << "Inserire denominatore della frazione: "; //stampo a video la frase
-
-    int d; //dichiarazione variabile intera d
 
     cin >> d; //leggo da tastiera il valore di d
 
