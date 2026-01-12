@@ -79,10 +79,6 @@ int main() //funzione principale
 
     f1.setDenominatore(d); //setto il denominatore di f1 al valore
 
-    //f1.setNumeratore(12); //setto il numeratore di f1 a 12
-
-    //f1.setDenominatore(16); //setto il denominatore di f1 a 4
-
     //int n1 = f1.getNumeratore(); //ottengo il numeratore di f1 e lo salvo in n1
 
     f1.semplifica(); //chiamo il metodo semplifica per l'oggetto f1
