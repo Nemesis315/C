@@ -77,7 +77,7 @@ int main() //funzione principale
 
     Frazione f2(3); //creazione dell'oggetto f2 della classe Frazione con numeratore 3 e denominatore 1
 
-    Frazione f3(4, 8); //creazione dell'oggetto f3 della classe Frazione con numeratore 4 e denominatore 8
+    Frazione f3(12, 8); //creazione dell'oggetto f3 della classe Frazione con numeratore 4 e denominatore 8
 
     cout << "Inserire numeratore della frazione: "; //stampo a schermo la frase
 
