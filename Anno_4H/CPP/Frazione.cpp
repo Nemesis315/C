@@ -10,6 +10,18 @@ class Frazione //Creo la classe Frazione
     public: //metodi pubblici
         Frazione(){}; //costruttore di default
 
+        Frazione(int n) //costruttore con un parametro
+        {
+            numeratore = n;
+            denominatore = 1;
+        }
+
+        Frazione(int n, int d) //costruttore con due parametri
+        {
+            numeratore = n;
+            denominatore = d;
+        }
+
         void setNumeratore(int n) //metodo per settare il numeratore
         {
             numeratore = n;
@@ -61,7 +73,11 @@ class Frazione //Creo la classe Frazione
 
 int main() //funzione principale
 {
-    Frazione f1,f2; //creazione degli oggetti f1 e f2 della classe Frazione
+    Frazione f1; //creazione dell'oggetto f1 della classe Frazione
+
+    Frazione f2(3); //creazione dell'oggetto f2 della classe Frazione con numeratore 3 e denominatore 1
+
+    Frazione f3(4, 8); //creazione dell'oggetto f3 della classe Frazione con numeratore 4 e denominatore 8
 
     cout << "Inserire numeratore della frazione: "; //stampo a schermo la frase
 
@@ -86,6 +102,18 @@ int main() //funzione principale
     cout << "La frazione e': "; //stampo a schermo la frase
 
     f1.stampa(); //chiamo il metodo stampa per l'oggetto f1
+
+    f2.semplifica(); //chiamo il metodo semplifica per l'oggetto f2
+
+    cout << "\nLa frazione e': "; //stampo a schermo la frase
+
+    f2.stampa(); //chiamo il metodo stampa per l'oggetto f2
+
+    f3.semplifica(); //chiamo il metodo semplifica per l'oggetto f3
+
+    cout << "\nLa frazione e': "; //stampo a schermo la frase
+
+    f3.stampa(); //chiamo il metodo stampa per l'oggetto f3
 
     cout << endl; //vado a capo
     
