@@ -15,7 +15,26 @@ class Rettangolo
 
             this->altezza = altezza;
         }
-    
+        
+        void setBase(double base)
+        {
+            this->base = base;
+        }
+
+        void setAltezza(double altezza)
+        {
+            this->altezza = altezza;
+        }
+
+        double getBase()
+        {
+            return base;
+        }
+        
+        double getAltezza()
+        {
+            return altezza;
+        }
 
         double calcolaArea()
         {
