@@ -40,9 +40,9 @@ int main()
 
     Rettangolo r1(base, altezza);
 
-    Rettangolo r2(10.0); //rettangolo con valori di default
+    Rettangolo r2(10); //rettangolo con valori di default
 
-    Rettangolo r3(6.0); //rettangolo con altezza di default
+    Rettangolo r3; //rettangolo con altezza di default
 
     cout << "Area del rettangolo: " << r1.calcolaArea() << endl;
     cout << "Perimetro del rettangolo: " << r1.calcolaPerimentro() << endl;
