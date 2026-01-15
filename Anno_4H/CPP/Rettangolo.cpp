@@ -9,7 +9,7 @@ class Rettangolo
         double altezza;
     
     public:
-        Rettangolo(double base = 10.0, double altezza = 2.0)
+        Rettangolo(double base = 10.0 , double altezza = 2.0)
         {
             this->base = base;
 
@@ -40,7 +40,7 @@ int main()
 
     Rettangolo r1(base, altezza);
 
-    Rettangolo r2; //rettangolo con valori di default
+    Rettangolo r2(10.0); //rettangolo con valori di default
 
     Rettangolo r3(6.0); //rettangolo con altezza di default
 
