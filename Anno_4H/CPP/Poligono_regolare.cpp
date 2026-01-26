@@ -89,9 +89,18 @@ int main()
     cout << "Inserisci il colore del secondo poligono: ";
     cin >> colore;
 
+    //Creazione degli oggetti Poligono_regolare
+
     Poligono_regolare p1(4, 2.5, "blu");
     Poligono_regolare p2(n_lati, lunghezza, colore);
 
+    //Modifica dei valori del primo poligono
+
+    p1.set_numero_lati(5);
+    p1.set_lunghezza_lato(3.0);
+    p1.set_colore("verde");
+
+    //Stampa dei perimetri e confronto
 
     cout << "Perimetro del primo poligono: " << p1.perimetro() << endl;
     cout << "Perimetro del secondo poligono: " << p2.perimetro() << endl;
