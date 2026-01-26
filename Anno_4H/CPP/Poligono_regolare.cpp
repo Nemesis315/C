@@ -14,7 +14,10 @@ public:
         this->lunghezza_lato = lunghezza_lato;
         this->colore = colore;
     }
-    ~Poligono_regolare();
+    ~Poligono_regolare()
+    {
+        cout << "Distruttore" << endl;
+    };
 
     double perimetro()
     {
