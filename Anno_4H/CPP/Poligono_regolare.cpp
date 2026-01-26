@@ -14,11 +14,13 @@ public:
         this->lunghezza_lato = lunghezza_lato;
         this->colore = colore;
     }
+
+    /*
     ~Poligono_regolare()
     {
         cout << "Distruttore" << endl;
     };
-
+    */
     //Metodi set e get
 
     void set_numero_lati(int numero_lati)
@@ -89,15 +91,16 @@ int main()
     cout << "Il poligono con il perimetro maggiore e': ";
     if (p1.perimetro() > p2.perimetro())
     {
-        cout << "il primo poligono." << endl;
+        cout << "primo." << endl;
     }
     else if (p1.perimetro() < p2.perimetro())
     {
-        cout << "il secondo poligono." << endl;
+        cout << "secondo." << endl;
     }
     else
     {
         cout << "entrambi i poligoni hanno lo stesso perimetro." << endl;
     }
+
     return 0;
 }
