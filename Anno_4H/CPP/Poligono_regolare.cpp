@@ -19,6 +19,38 @@ public:
         cout << "Distruttore" << endl;
     };
 
+    //Metodi set e get
+
+    void set_numero_lati(int numero_lati)
+    {
+        this->numero_lati = numero_lati;
+    };
+
+    void set_lunghezza_lato(double lunghezza_lato)
+    {
+        this->lunghezza_lato = lunghezza_lato;
+    };
+
+    void set_colore(string colore)
+    {
+        this->colore = colore;
+    };
+
+    int get_numero_lati()
+    {
+        return numero_lati;
+    };
+    
+    double get_lunghezza_lato()
+    {
+        return lunghezza_lato;
+    };
+
+    string get_colore()
+    {
+        return colore;
+    };
+
     double perimetro()
     {
         return numero_lati * lunghezza_lato;
