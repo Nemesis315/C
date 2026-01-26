@@ -54,26 +54,7 @@ public:
     double perimetro()
     {
         return numero_lati * lunghezza_lato;
-    }
-
-    void contronta_perimetro(Poligono_regolare p)
-    {
-        double p1 = perimetro();
-        double p2 = p.perimetro();
-
-        if (p1 > p2)
-        {
-            cout << "Il primo poligono ha un perimetro maggiore: " << p1 << endl;
-        }
-        else if (p1 < p2)
-        {
-            cout << "Il secondo poligono ha un perimetro maggiore: " << p2 << endl;
-        }
-        else
-        {
-            cout << "I due poligoni hanno lo stesso perimetro: " << p1 << endl;
-        }
-    }
+    };
 };
 
 int main()
@@ -105,7 +86,18 @@ int main()
     cout << "Perimetro del primo poligono: " << p1.perimetro() << endl;
     cout << "Perimetro del secondo poligono: " << p2.perimetro() << endl;
 
-    p1.contronta_perimetro(p2);
-
+    cout << "Il poligono con il perimetro maggiore e': ";
+    if (p1.perimetro() > p2.perimetro())
+    {
+        cout << "il primo poligono." << endl;
+    }
+    else if (p1.perimetro() < p2.perimetro())
+    {
+        cout << "il secondo poligono." << endl;
+    }
+    else
+    {
+        cout << "entrambi i poligoni hanno lo stesso perimetro." << endl;
+    }
     return 0;
 }
