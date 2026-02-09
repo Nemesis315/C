@@ -1,4 +1,4 @@
-#include <string>
+#include <string.h>
 
 #ifndef ANIMALE_H
 

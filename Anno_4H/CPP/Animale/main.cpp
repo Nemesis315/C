@@ -13,6 +13,10 @@ int main()
     cout << "Longevita: " << animale1->getLongevita() << endl;
     cout << "Velocita: " << animale1->getVelocita() << endl;
 
+    animale1->mangia();
+    animale1->dorme();
+    animale1->siMuove();
+
     delete animale1;
     return 0;
 }
