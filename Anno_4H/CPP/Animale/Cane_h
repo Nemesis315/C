@@ -1,0 +1,25 @@
+#include <string.h>
+#include <string>
+
+using namespace std;
+
+#ifndef CANE_H
+#define CANE_H
+
+class Cane 
+{
+protected:
+    std :: string razza;
+
+    
+
+public:
+
+};
+
+
+
+
+
+
+#endif

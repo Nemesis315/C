@@ -8,7 +8,7 @@ using namespace std;
 
 class Animale
 {
-    private:
+    protected:
         int Classificazione;  //1 = Vertebrato, 2 = Invertebrato
 		int Sesso;            //0 = Maschio, 1 = Femmina
         int Longevita;
