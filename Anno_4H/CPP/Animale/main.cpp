@@ -5,7 +5,7 @@ using namespace std;
 
 int main()
 {
-    Animale* animale1 = new Animale(1, 0, 10, 20, "Cane");
+    Animale* animale1 = new Animale(1, 1, 27, 65, "Zebra");
     cout << "Nome: " << animale1->getNome() << endl;
     cout << "Classificazione: " << animale1->getClassificazione() << endl;
     cout << "Sesso: " << animale1->getSesso() << endl;
