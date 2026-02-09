@@ -1,0 +1,36 @@
+#include <string>
+
+#ifndef ANIMALE_H
+
+#define ANIMALE_H
+
+using namespace std;
+
+class Animale
+{
+    private:
+        int Classificazione;
+		int Sesso;
+        int Longevita;
+        int Velocita;
+        std::string Nome;
+
+	public:
+        Animale(int Classificazione, int Sesso, int Longevita, int Velocita, string Nome);
+        void setClassificazione(int Classificazione);
+        void setSesso(int Sesso);
+        void setLongevita(int Longevita);
+        void setVelocita(int Velocita);
+        void setNome(string Nome);
+        int getClassificazione();
+        int getSesso();
+        int getLongevita();
+        int getVelocita();
+        string getNome();
+
+        void mangia();
+        void dorme();
+        void siMuove();	
+};
+
+#endif
