@@ -1,6 +1,7 @@
 #include <iostream>
 #include "Animale_h"
 #include "string.h"
+#include "Animale.cpp"
 using namespace std;
 
 int main()
