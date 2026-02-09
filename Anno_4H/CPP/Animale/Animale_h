@@ -9,8 +9,8 @@ using namespace std;
 class Animale
 {
     private:
-        int Classificazione;
-		int Sesso;
+        int Classificazione;  //1 = Vertebrato, 2 = Invertebrato
+		int Sesso;            //0 = Maschio, 1 = Femmina
         int Longevita;
         int Velocita;
         std::string Nome;
