@@ -1,0 +1,26 @@
+#include <string.h>
+#ifndef RETTANGOLO1_H
+#define RETTANGOLO1_H
+
+class Rettangolo1_h
+{
+protected:
+    int base;
+    int altezza;
+public:
+    Rettangolo1_h(int base, int altezza);
+
+    void setBase(int base);
+    void setAltezza(int altezza);
+    int getBase();
+    int getAltezza();
+    int area();
+    int perimetro();
+};
+
+
+
+
+
+
+#endif
