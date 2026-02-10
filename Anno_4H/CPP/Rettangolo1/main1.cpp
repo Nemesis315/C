@@ -10,13 +10,16 @@ int main()
 
     //Rettangolo 1
     cout << "Rettangolo 1" << endl;
+    cout << endl;
     cout << "Base: " << rettangolo1->getBase() << endl;
     cout << "Altezza: " << rettangolo1->getAltezza() << endl;
     cout << "Area: " << rettangolo1->calcolaArea() << endl;
     cout << "Perimetro: " << rettangolo1->calcolaPerimetro() << endl;
+    cout << endl;
 
     //Rettangolo 2
     cout << "Rettangolo 2" << endl;
+    cout << endl;
     cout << "Base: " << rettangolo2->getBase() << endl;
     cout << "Altezza: " << rettangolo2->getAltezza() << endl;
     cout << "Area: " << rettangolo2->calcolaArea() << endl;
