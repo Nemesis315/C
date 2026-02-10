@@ -7,7 +7,7 @@ protected:
     int base;
     int altezza;
 public:
-    Rettangolo1_h(int base, int altezza);
+    Rettangolo1_h(int base = 5, int altezza = 2);
     void setBase(int base);
     void setAltezza(int altezza);
     int getBase();
