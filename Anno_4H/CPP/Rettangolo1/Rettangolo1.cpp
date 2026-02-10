@@ -38,4 +38,3 @@ int Rettangolo1_h::perimetro()
 {
     return 2 * (base + altezza);
 }
-
