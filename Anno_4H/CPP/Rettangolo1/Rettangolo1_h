@@ -9,7 +9,6 @@ protected:
     int altezza;
 public:
     Rettangolo1_h(int base, int altezza);
-
     void setBase(int base);
     void setAltezza(int altezza);
     int getBase();
@@ -17,10 +16,5 @@ public:
     int area();
     int perimetro();
 };
-
-
-
-
-
 
 #endif
