@@ -7,13 +7,13 @@ protected:
     int base;
     int altezza;
 public:
-    Rettangolo1_h(int base = 5, int altezza = 2);
+    Rettangolo1_h(int base = 1, int altezza = 1);
     void setBase(int base);
     void setAltezza(int altezza);
     int getBase();
     int getAltezza();
-    int area();
-    int perimetro();
+    int calcolaArea();
+    int calcolaPerimetro();
 };
 
 #endif

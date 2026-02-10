@@ -29,12 +29,12 @@ int Rettangolo1_h::getAltezza()
     return altezza;
 }
 
-int Rettangolo1_h::area()
+int Rettangolo1_h::calcolaArea()
 {
     return base * altezza;
 }
 
-int Rettangolo1_h::perimetro()
+int Rettangolo1_h::calcolaPerimetro()
 {
     return 2 * (base + altezza);
 }

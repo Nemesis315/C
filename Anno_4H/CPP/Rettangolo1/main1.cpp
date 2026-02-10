@@ -12,15 +12,15 @@ int main()
     cout << "Rettangolo 1" << endl;
     cout << "Base: " << rettangolo1->getBase() << endl;
     cout << "Altezza: " << rettangolo1->getAltezza() << endl;
-    cout << "Area: " << rettangolo1->area() << endl;
-    cout << "Perimetro: " << rettangolo1->perimetro() << endl;
+    cout << "Area: " << rettangolo1->calcolaArea() << endl;
+    cout << "Perimetro: " << rettangolo1->calcolaPerimetro() << endl;
 
     //Rettangolo 2
     cout << "Rettangolo 2" << endl;
     cout << "Base: " << rettangolo2->getBase() << endl;
     cout << "Altezza: " << rettangolo2->getAltezza() << endl;
-    cout << "Area: " << rettangolo2->area() << endl;
-    cout << "Perimetro: " << rettangolo2->perimetro() << endl;
+    cout << "Area: " << rettangolo2->calcolaArea() << endl;
+    cout << "Perimetro: " << rettangolo2->calcolaPerimetro() << endl;
 
 
     delete rettangolo1;
