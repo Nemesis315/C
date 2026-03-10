@@ -26,7 +26,7 @@ class Pila // Classe che rappresenta la pila
 
         void push(int valore) // Aggiunge un elemento alla cima della pila
         {
-            struct Nodo* newNode = new struct Nodo; // Crea un nuovo nodo
+            Nodo* newNode = new  Nodo; // Crea un nuovo nodo
             newNode->info = valore; // Assegna il valore al campo info del nuovo nodo
             newNode->next = top; // Il campo next del nuovo nodo punta al nodo attualmente in cima alla pila
             top = newNode; // Il puntatore top ora punta al nuovo nodo, che è diventato la nuova cima della pila
@@ -36,7 +36,7 @@ class Pila // Classe che rappresenta la pila
         {
             if (top != NULL) // Controlla se la pila non è vuota prima di rimuovere un elemento
             {
-                struct Nodo* temp = top; // Salva il nodo attualmente in cima alla pila in un puntatore temporaneo
+                Nodo* temp = top; // Salva il nodo attualmente in cima alla pila in un puntatore temporaneo
                 top = top->next; // Il puntatore top ora punta al nodo successivo, che diventa la nuova cima della pila
                 delete temp; // Dealloca la memoria del nodo rimosso per evitare perdite di memoria
             }
@@ -58,7 +58,7 @@ class Pila // Classe che rappresenta la pila
 
         void print() // Stampa gli elementi della pila dalla cima alla base
         {
-            struct Nodo* current = top; // Inizia a stampare dal nodo in cima alla pila
+            Nodo* current = top; // Inizia a stampare dal nodo in cima alla pila
             while (current != NULL) // Continua a stampare finché non si raggiunge la fine della pila (quando current diventa NULL)
             {
                 cout << current->info << " "; // Stampa il valore del campo info del nodo corrente seguito da uno spazio
