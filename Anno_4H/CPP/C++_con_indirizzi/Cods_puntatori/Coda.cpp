@@ -35,10 +35,10 @@ class Coda // Classe che rappresenta la coda
             {
                 inizio = fine = newNode; // Il nuovo nodo è sia il front che il rear della coda
             }
-            else // Altrimenti, aggiungi il nuovo nodo alla fine della coda e aggiorna il rear
+            else // Altrimenti, aggiungi il nuovo nodo alla fine della coda e aggiorna il nodo in coda
             {
-                fine->next = newNode; // Il campo next del nodo attualmente in rear punta al nuovo nodo
-                fine = newNode; // Il puntatore rear ora punta al nuovo nodo, che è diventato l'ultimo nodo della coda
+                fine->next = newNode; // Il campo next del nodo attualmente in fine punta al nuovo nodo
+                fine = newNode; // Il puntatore fine ora punta al nuovo nodo, che è diventato l'ultimo nodo della coda
             }
         }
 
@@ -46,14 +46,14 @@ class Coda // Classe che rappresenta la coda
         {
             if (inizio != NULL) // Controlla se la coda non è vuota prima di rimuovere un elemento
             {
-                Nodo* temp = inizio; // Salva il nodo attualmente in front in un puntatore temporaneo
-                inizio = inizio->next; // Il puntatore front ora punta al nodo successivo, che diventa il nuovo front della coda
+                Nodo* temp = inizio; // Salva il nodo attualmente all'inizio della coda in un puntatore temporaneo
+                inizio = inizio->next; // Il puntatore inizio ora punta al nodo successivo, che diventa il nuovo inizio della coda
 
-                if (inizio == NULL) // Se la coda diventa vuota dopo la rimozione, aggiorna anche il fine a NULL
+                if (inizio == NULL) // Se la coda è diventata vuota dopo la rimozione, aggiorna anche il rear
                 {
-                    fine = NULL;
+                    fine = NULL; // La coda è vuota, quindi il puntatore rear è NULL
                 }
-                delete temp; // Dealloca la memoria del nodo rimosso
+                delete temp; // Dealloca la memoria del nodo rimosso per evitare perdite di memoria
             }
         }
 };
