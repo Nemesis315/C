@@ -58,12 +58,12 @@ class Pila // Classe che rappresenta la pila
 
         void print() // Stampa gli elementi della pila dalla cima alla base
         {
-            Nodo* current = top; // Inizia a stampare dal nodo in cima alla pila
-            while (current != NULL) // Continua a stampare finché non si raggiunge la fine della pila (quando current diventa NULL)
+            Nodo* x = top; // Inizia a stampare dal nodo in cima alla pila
+            while (x != NULL) // Continua a stampare finché non si raggiunge la fine della pila (quando x diventa NULL)
             {
-                cout << current->info << " "; // Stampa il valore del campo info del nodo corrente seguito da uno spazio
+                cout << x->info << " "; // Stampa il valore del campo info del nodo corrente seguito da uno spazio
 
-                current = current->next; // Passa al nodo successivo nella pila
+                x = x->next; // Passa al nodo successivo nella pila
             }
 
             cout << endl; // Stampa una nuova linea dopo aver stampato tutti gli elementi della pila
