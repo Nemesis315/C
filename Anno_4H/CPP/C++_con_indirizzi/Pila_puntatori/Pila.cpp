@@ -56,7 +56,7 @@ class Pila // Classe che rappresenta la pila
             return top == NULL; // Restituisce true se il puntatore top è NULL, indicando che la pila è vuota, altrimenti restituisce false
         }
 
-        void print() // Stampa gli elementi della pila dalla cima alla base
+        void print() // Stampa gli elementi della pila dalla cima alla base anche se non si richiede esplicitamente, è utile per visualizzare il contenuto della pila
         {
             Nodo* x = top; // Inizia a stampare dal nodo in cima alla pila
             while (x != NULL) // Continua a stampare finché non si raggiunge la fine della pila (quando x diventa NULL)
