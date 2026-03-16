@@ -4,8 +4,8 @@ using namespace std;
 
 struct Nodo // Struttura del nodo della coda
 {
-    int Info;
-    Nodo* next;
+    int Info; // Campo che contiene il valore dell'elemento nella coda
+    Nodo* next; // Puntatore al nodo successivo nella coda, che rappresenta il nodo dopo l'elemento attuale
 };
 
 class Coda
