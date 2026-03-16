@@ -18,7 +18,7 @@ class Pila // Classe che rappresenta la pila
 {
     private: // Puntatore al nodo superiore della pila
 
-        struct Nodo* top; // Puntatore al nodo superiore della pila
+        PNodo top; // Puntatore al nodo superiore della pila
 
     public: // Costruttore della pila
 
