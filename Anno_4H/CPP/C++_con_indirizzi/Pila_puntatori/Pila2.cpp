@@ -51,14 +51,13 @@ bool Pila::isEmpty() // Verifica se la pila è vuota
 
 void Pila::print() // Stampa gli elementi della pila dalla cima alla base
 {
-    Nodo* current = top; // Inizia a stampare dal nodo in cima alla pila
-    while (current != NULL) // Continua a stampare finché non si raggiunge la fine della pila (quando current diventa NULL)
+    Nodo* attuale = top; // Inizia a stampare dal nodo in cima alla pila
+    while (attuale != NULL) // Continua a stampare finché non si raggiunge la fine della pila (quando attuale diventa NULL)
     {
-        cout << current->info << " "; // Stampa il valore del campo info del nodo corrente seguito da uno spazio
+        cout << attuale->info << " "; // Stampa il valore del campo info del nodo corrente seguito da uno spazio
 
-        current = current->next; // Passa al nodo successivo nella pila
+        attuale = attuale->next; // Passa al nodo successivo nella pila
     }
 
     cout << endl; // Stampa una nuova linea dopo aver stampato tutti gli elementi della pila
 }
-
