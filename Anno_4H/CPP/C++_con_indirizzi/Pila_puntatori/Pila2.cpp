@@ -4,14 +4,6 @@
 
 using namespace std;
 
-
-
-
-
-
-
-
-
 Pila::Pila() // Inizializza la pila vuota
 {
     top = NULL; // La pila è vuota, quindi il puntatore top è NULL
