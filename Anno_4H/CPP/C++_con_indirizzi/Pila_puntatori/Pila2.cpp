@@ -11,7 +11,7 @@ Pila::Pila() // Inizializza la pila vuota
 
 void Pila::push(int valore) // Aggiunge un elemento alla cima della pila
 {
-    Nodo* newNode = new  Nodo; // Crea un nuovo nodo
+    Nodo* newNode = new Nodo; // Crea un nuovo nodo
     newNode->info = valore; // Assegna il valore al campo info del nuovo nodo
     newNode->next = top; // Il campo next del nuovo nodo punta al nodo attualmente in cima alla pila
     top = newNode; // Il puntatore top ora punta al nuovo nodo, che è diventato la nuova cima della pila
