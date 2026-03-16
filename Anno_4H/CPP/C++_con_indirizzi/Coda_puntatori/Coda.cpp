@@ -8,13 +8,11 @@ struct Nodo // Struttura del nodo della coda
     Nodo* next;
 };
 
-typedef Nodo* PNodo;
-
 class Coda
 {
 private:
-    PNodo Inizio; // Puntatore al nodo di inizio della coda
-    PNodo Fine; // Puntatore al nodo di fine della coda
+    Nodo* Inizio; // Puntatore al nodo di inizio della coda
+    Nodo* Fine; // Puntatore al nodo di fine della coda
 public:
     Coda() // Costruttore della coda, inizializza la coda vuota
     {
@@ -24,7 +22,7 @@ public:
 
     void Inserisci(int valore) // Aggiunge un elemento alla fine della coda
     {
-        PNodo newNode = new Nodo; // Crea un nuovo nodo
+        Nodo* newNode = new Nodo; // Crea un nuovo nodo
         newNode->Info = valore; // Assegna il valore al campo Info del nuovo nodo
         newNode->next = NULL; // Il campo next del nuovo nodo è NULL, poiché sarà l'ultimo nodo della coda
 
@@ -45,7 +43,7 @@ public:
     {
         if (Inizio != NULL) // Controlla se la coda non è vuota prima di rimuovere un elemento
         {
-            PNodo temp = Inizio; // Salva il nodo attualmente all'inizio della coda in un puntatore temporaneo
+            Nodo* temp = Inizio; // Salva il nodo attualmente all'inizio della coda in un puntatore temporaneo
             Inizio = Inizio->next; // Il puntatore Inizio ora punta al nodo successivo, che diventa il nuovo nodo di inizio della coda
             delete temp; // Dealloca la memoria del nodo rimosso per evitare perdite di memoria
 

@@ -8,17 +8,16 @@ using namespace std;
 
 struct Nodo // Struttura del nodo della pila
 {
-    int info;
-    Nodo* next;
+    int info; // Campo che contiene il valore dell'elemento nella pila
+    Nodo* next; // Puntatore al nodo successivo nella pila, che rappresenta il nodo sotto l'elemento attuale
 };
 
-typedef Nodo* PNodo;
 
 class Pila // Classe che rappresenta la pila
 {
     private: // Puntatore al nodo superiore della pila
 
-        PNodo top; // Puntatore al nodo superiore della pila
+        Nodo* top; // Puntatore al nodo superiore della pila
 
     public: // Costruttore della pila
 
