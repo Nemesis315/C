@@ -1,193 +1,190 @@
 #include <iostream>
-#include <string>
 
 using namespace std;
 
-struct Nodo
+// Struttura del nodo della lista
+struct Nodo 
 {
-    int dato;
+    int info;
     Nodo* next;
 };
 
-class Lista
-{
-    private:
-        Nodo* inizio;
-        Nodo* fine;
-    public:
-        Lista()
-        {
-            inizio = NULL;
-            fine = NULL;
-        }
+// Classe Lista
+class Lista {
+private:
+    Nodo* testa;
 
-        void InserisciInTesta(int valore)
-        {
-            Nodo* nuovoNodo = new Nodo;
-            nuovoNodo->dato = valore;
-            nuovoNodo->next = inizio;
-            inizio = nuovoNodo;
-            if (fine == NULL)
-            {
-                fine = nuovoNodo;
-            }
-        }
+public:
+    // Costruttore
+    Lista() 
+    {
+        testa = NULL;
+    }
 
-        void InserisciInCoda(int valore)
-        {
-            Nodo* nuovoNodo = new Nodo;
-            nuovoNodo->dato = valore;
-            nuovoNodo->next = NULL;
-            if (fine != NULL)
-            {
-                fine->next = nuovoNodo;
-            }
-            fine = nuovoNodo;
-            if (inizio == NULL)
-            {
-                inizio = nuovoNodo;
-            }
-        }
+    // Distruttore
+    ~Lista() 
+    {
+        cancella_lista();
+    }
 
-        void InserisciInPosizione(int valore, int posizione)
+    // Inserisci elemento in testa
+    void inserisci_testa(int valore) 
+    {
+        Nodo* nuovo = new Nodo;
+        nuovo->info = valore;
+        nuovo->next = testa;
+        testa = nuovo;
+        cout << "Elemento " << valore << " inserito in testa.\n";
+    }
+
+    // Inserisci elemento in coda
+    void inserisci_coda(int valore) 
+    {
+        Nodo* nuovo = new Nodo;
+        nuovo->info = valore;
+        nuovo->next = NULL;
+
+        if (testa == NULL) 
         {
-            if (posizione < 0)
-            {
-                return;
-            }
-            if (posizione == 0)
-            {
-                InserisciInTesta(valore);
-                return;
-            }
-            Nodo* nuovoNodo = new Nodo;
-            nuovoNodo->dato = valore;
-            nuovoNodo->next = NULL;
-            Nodo* temp = inizio;
-            for (int i = 0; temp != NULL && i < posizione - 1; i++) // Scorri fino alla posizione precedente
+            testa = nuovo;
+        }
+        else 
+        {
+            Nodo* temp = testa;
+            while (temp->next != NULL) 
             {
                 temp = temp->next;
             }
-            if (temp == NULL)
-            {
-                delete nuovoNodo;
-                return;
-            }
-            nuovoNodo->next = temp->next;
-            temp->next = nuovoNodo;
-            if (nuovoNodo->next == NULL)
-            {
-                fine = nuovoNodo;
-            }
+            temp->next = nuovo;
         }
+        cout << "Elemento " << valore << " inserito in coda.\n";
+    }
 
-        void EliminaInPosizione(int posizione)
+    // Inserisci elemento in una posizione specifica (1-based index) con 2 puntatori
+    void inserisci_posizione(int valore, int posizione) 
+    {
+        Nodo* temp;
+        Nodo* q;
+        if (testa == NULL || testa->info > valore)
         {
-            if (posizione < 0 || inizio == NULL)
-            {
-                return;
-            }
-            if (posizione == 0)
-            {
-                EliminaInTesta();
-                return;
-            }
-            Nodo* temp = inizio;
-            for (int i = 0; temp != NULL && i < posizione - 1; i++)
-            {
-                temp = temp->next;
-            }
-            if (temp == NULL || temp->next == NULL)
-            {
-                return;
-            }
-            Nodo* nodoDaEliminare = temp->next;
-            temp->next = nodoDaEliminare->next;
-            if (nodoDaEliminare == fine)
-            {
-                fine = temp;
-            }
-            delete nodoDaEliminare;
+            inserisci_testa(valore);
+            return;            
         }
+        else
+        {
+            temp = testa;
+            q = temp->next;
 
-        void EliminaInCoda()
-        {
-            if (fine != NULL)
+            while (q != NULL && q->info < valore)
             {
-                if (inizio == fine)
-                {
-                    delete fine;
-                    inizio = NULL;
-                    fine = NULL;
-                }
-                else
-                {
-                    Nodo* temp = inizio;
-                    while (temp->next != fine)
-                    {
-                        temp = temp->next;
-                    }
-                    delete fine;
-                    fine = temp;
-                    fine->next = NULL;
-                }
+                temp = q;
+                q = q->next;
             }
+            
+            // Inserisci il nuovo nodo tra temp e q
+            Nodo* nuovo = new Nodo;
+            nuovo->info = valore;
+            nuovo->next = q;
+            temp->next = nuovo;
+            cout << "Elemento " << valore << " inserito in ordine.\n";
         }
+    }
 
-        void EliminaInTesta()
+    // Stampa la lista
+    void stampa() 
+    {
+        if (testa == NULL) 
         {
-            if (inizio != NULL)
-            {
-                Nodo* temp = inizio;
-                inizio = inizio->next;
-                delete temp;
-                if (inizio == NULL)
-                {
-                    fine = NULL;
-                }
-            }
+            cout << "Lista vuota!\n";
+            return;
         }
+        cout << "Lista: ";
+        Nodo* temp = testa;
+        while (temp != NULL) 
+        {
+            cout << temp->info;
+            if (temp->next != NULL) 
+            {
+                cout << " -> ";
+            }
+            temp = temp->next;
+        }
+        cout << " -> NULL\n";
+    }
 
-        void StampaLista()
-        {
-            Nodo* temp = inizio;
-            while (temp != NULL)
-            {
-                cout << temp->dato << " ";
-                temp = temp->next;
-            }
-            cout << endl;
+    // Cancella tutta la lista
+    void cancella_lista() {
+        Nodo* temp;
+        while (testa != NULL) {
+            temp = testa;
+            testa = testa->next;
+            delete temp;
         }
+        cout << "Lista cancellata.\n";
+    }
 };
 
-int main()
+// Funzione principale per il test
+int main() 
 {
     Lista lista;
-    lista.InserisciInCoda(10);
-    lista.InserisciInCoda(20);
-    lista.InserisciInCoda(30);
-    cout << "Lista dopo inserimenti in coda: ";
-    lista.StampaLista();
+    int scelta, valore;
 
-    lista.InserisciInTesta(5);
-    cout << "Lista dopo inserimento in testa: ";
-    lista.StampaLista();
+    cout << "=== LISTA CON PUNTATORI (SOLO TESTA) ===\n\n";
 
-    lista.InserisciInPosizione(15, 2);
-    cout << "Lista dopo inserimento in posizione 2: ";
-    lista.StampaLista();
+    while (true) 
+    {
+        cout << "\n--- MENU ---\n";
+        cout << "1. Inserisci elemento in testa\n";
+        cout << "2. Inserisci elemento in coda\n";
+        cout << "3. Inserisci elemento in posizione\n";
+        cout << "4. Stampa lista\n";
+        cout << "5. Cancella lista\n";
+        cout << "0. Esci\n";
+        cout << "Sceglia un'opzione: ";
+        cin >> scelta;
 
-    lista.EliminaInPosizione(1);
-    cout << "Lista dopo eliminazione in posizione 1: ";
-    lista.StampaLista();
+        switch (scelta) 
+        {
+        case 1:
+            cout << "Inserisci valore: ";
+            cin >> valore;
+            lista.inserisci_testa(valore);
+            break;
 
-    lista.EliminaInCoda();
-    cout << "Lista dopo eliminazione in coda: ";
-    lista.StampaLista();
+        case 2:
+            cout << "Inserisci valore: ";
+            cin >> valore;
+            lista.inserisci_coda(valore);
+            break;
 
-    lista.EliminaInTesta();
-    cout << "Lista dopo eliminazione in testa: ";
-    lista.StampaLista();
+        case 3: 
+        {
+            int posizione;
+            cout << "Inserisci valore: ";
+            cin >> valore;
+            cout << "Inserisci posizione (1-based index): ";
+            cin >> posizione;
+            lista.inserisci_posizione(valore, posizione);
+            break;
+        }
+
+        case 4:
+            lista.stampa();
+            break;
+
+        case 5:
+            lista.cancella_lista();
+            break;
+
+        case 0:
+            cout << "Arrivederci!\n";
+            return 0;
+
+        default:
+            cout << "Opzione non valida!\n";
+        }
+    }
 
     return 0;
 }
