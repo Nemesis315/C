@@ -65,6 +65,18 @@ public:
         cout << "                  3 Cacciatorpedinieri(3), 4 Sommergibili(2)\n";
     }
     
+    int displayPlacementMenu() {
+        cout << "\n╔════════════════════════════════════════╗\n";
+        cout << "║   COME DESIDERI POSIZIONARE LE NAVI?   ║\n";
+        cout << "╚════════════════════════════════════════╝\n";
+        cout << "\n1. Posizionamento MANUALE\n";
+        cout << "2. Posizionamento AUTOMATICO\n";
+        cout << "\nScegli (1 o 2): ";
+        int choice;
+        cin >> choice;
+        return choice;
+    }
+    
     bool isValidPosition(char grid[GRID_SIZE][GRID_SIZE], int x, int y, int length, bool isHorizontal) {
         if (isHorizontal) {
             if (y + length > GRID_SIZE) return false;
@@ -160,6 +172,44 @@ public:
                 }
             }
         }
+    }
+    
+    void autoPlacePlayerShips() {
+        cout << "\n╔════════════════════════════════════════╗\n";
+        cout << "║     POSIZIONAMENTO AUTOMATICO IN CORSO ║\n";
+        cout << "╚════════════════════════════════════════╝\n";
+        
+        vector<int> shipLengths = {5, 4, 4, 3, 3, 3, 2, 2, 2, 2};
+        int shipNumber = 1;
+        
+        for (int length : shipLengths) {
+            bool placed = false;
+            while (!placed) {
+                int x = rand() % GRID_SIZE;
+                int y = rand() % GRID_SIZE;
+                bool horizontal = rand() % 2 == 0;
+                
+                if (isValidPosition(playerGrid, x, y, length, horizontal)) {
+                    placeShip(playerGrid, x, y, length, horizontal);
+                    playerShips.push_back(Ship(x, y, length, horizontal));
+                    
+                    string shipType;
+                    if (length == 5) shipType = "Corazzata";
+                    else if (length == 4) shipType = "Incrociatore";
+                    else if (length == 3) shipType = "Cacciatorpediniere";
+                    else shipType = "Sommergibile";
+                    
+                    cout << shipType << " " << shipNumber << " posizionata a Riga " << x 
+                         << ", Colonna " << y << " (";
+                    cout << (horizontal ? "Orizzontale" : "Verticale") << ")\n";
+                    shipNumber++;
+                    placed = true;
+                }
+            }
+        }
+        
+        cout << "\nTutte le navi sono state posizionate!\n";
+        displayGrid(playerGrid, true, "Il tuo campo:");
     }
     
     void computerPlaceShips() {
@@ -300,7 +350,15 @@ public:
     
     void play() {
         displayMenu();
-        playerPlaceShips();
+        
+        int placementChoice = displayPlacementMenu();
+        
+        if (placementChoice == 2) {
+            autoPlacePlayerShips();
+        } else {
+            playerPlaceShips();
+        }
+        
         computerPlaceShips();
         
         cout << "\nIl computer ha posizionato le sue navi!\n";
