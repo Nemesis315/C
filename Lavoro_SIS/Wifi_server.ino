@@ -1,4 +1,5 @@
-#include <WiFi.h> // Includere la libreria WiFi per la connessione wireless
+// Includere la libreria WiFi per la connessione wireless
+#include <WiFi.h> 
 
 // Credenziali di rete WiFi
 const char* ssid = "YOUR_SSID";           // Questo comando serve per creare una costante di tipo char* per memorizzare l'SSID della rete WiFi a cui connettersi
@@ -10,7 +11,9 @@ void setup() // Funzione di configurazione di arduino - Viene eseguita una sola 
 {
   Serial.begin(115200); //Il comando Serial.begin() serve per settare la velocità di comunicazione della porta seriale a 115220 baud
   WiFi.begin(ssid, password); // Funzione della liberia WiFi.h serve per inizializzare le impostazioni del WiFi chiedendo 2 parametri: l'SSID e la password
-  while (WiFi.status() != WL_CONNECTED) delay(500); // Questo ciclo while serve per aspettere finchè un dispositivo non si connette alla rete WiFi, controllando se il WiFi e acceso e se ci sono dispositivi connessi aspettando un delay di 500 millisecondi
+  // Questo ciclo while serve per aspettere finchè un dispositivo non si connette alla rete WiFi controllando se il WiFi e acceso
+  //e se ci sono dispositivi connessi aspettando un delay di 500 millisecondi
+  while (WiFi.status() != WL_CONNECTED) delay(500); 
   Serial.println(WiFi.localIP()); // Stampa l'indirizzo Ip locale sul monitor seriale quando un dispositivo si connette al WiFi
   wifiServer.begin(); // Avvia il server WiFi dopo i controlli per permettere la connesione di eventuali client
 }
