@@ -12,7 +12,8 @@ void setup()
   Serial.begin(115200); //Il comando Serial.begin() serve per settare la velocità di comunicazione della porta seriale a 115220 baud
   WiFi.begin(ssid, password); // Funzione della liberia WiFi.h serve per inizializzare le impostazioni del WiFi chiedendo 2 parametri: l'SSID e la password
   
-  // Questo ciclo while serve per aspettere finchè un dispositivo non si connette alla rete WiFi, controllando se il WiFi e acceso e se ci sono dispositivi connessi aspettando un delay di 500 millisecondi
+  // Questo ciclo while serve per aspettere finchè un dispositivo non si connette alla rete WiFi controllando se il WiFi e acceso
+  //e se ci sono dispositivi connessi aspettando un delay di 500 millisecondi
   while (WiFi.status() != WL_CONNECTED) 
   {
     delay(500);
