@@ -27,29 +27,26 @@ void loop()
   // Controllo di sicurezza: se NON siamo già connessi al server
   if (!client.connected()) 
   {
-    // ...proviamo a connetterci all'IP e alla porta del server.
-    // Il '!' davanti significa "Se la connessione FALLISCE..."
-    if (!client.connect(host, port)) 
+    if (!client.connect(host, port)) //Prviamo una richiesta di connessione al server, se fallisce esegue il blocco di codice dentro le graffe
     {
-      Serial.println("Connection failed"); // Ci stampiamo l'errore in faccia
-      delay(5000); // Aspettiamo 5 secondi prima di riprovare, per non mandare in crash tutto
-      return; // "Raga, fermi tutti": stoppa il loop qui e ricomincia dall'inizio della funzione loop()
+      Serial.println("Connection failed"); // Stampa a schermo "Connection failed" se la connessione al server fallisce
+      delay(5000); // Aspettiamo 5 secondi prima di riprovare
+      return; //Esce dalla funzione loop() e ricomincia da capo, tornando a controllare se siamo connessi al server o meno
     }
   }
   
-  // Se il codice è arrivato qui, significa che siamo connessi. Mandiamo un messaggio al server
+  // Mandiamo un messaggio al server quindi la connessione è avvenuta con successo
   client.print("Hello from ESP32");
   
-  // Finché il server ci sta rispondendo e ci sono dati pronti da leggere nel buffer...
+  // Finché il server ci risponde
   while (client.available()) 
   {
-    // ...leggiamo la risposta una riga alla volta, fermandoci quando finisce il testo ('\r')
+    //Leggiamo le risposte del server fino a quando non incontriamo il caratter "\r"
     String line = client.readStringUntil('\r');
     // Stampiamo quello che ci ha risposto il server sul monitor seriale del PC
     Serial.println(line);
   }
   
-  // Aspettiamo 10 secondi prima di ripartire dall'inizio del loop e rimandare il messaggio 
-  // Altrimenti spammiamo il server e ci banna l'IP!
+  // Aspettiamo 10 secondi prima di ripartire dall'inizio del loop e rimandare il messaggio al server
   delay(10000);
 }
